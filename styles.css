@@ -21,7 +21,7 @@ main {
 .navbar-brand, 
 .nav-link {
     color: white !important;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
     font-size: 1.1em;
 }
 
@@ -35,10 +35,10 @@ main {
     color: white !important;
 }
 
-/* All text in Times New Roman */
+/* All text in Times New Roman
 * {
     font-family: 'Times New Roman', Times, serif;
-}
+} */
 
 /* Make sure links are visible */
 a {
