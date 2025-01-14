@@ -1,0 +1,50 @@
+/* Main background and text */
+body {
+    background-color: #1a365d;  /* Dark blue */
+    color: white !important;
+}
+
+/* Make content area match background */
+.content-container, 
+.content,
+main {
+    background-color: #1a365d !important;  /* Same dark blue */
+    color: white !important;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #0f172a !important;  /* Darker blue */
+}
+
+/* Navigation text */
+.navbar-brand, 
+.nav-link {
+    color: white !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+}
+
+/* Style navigation links on hover */
+.nav-link:hover {
+    color: #e2e8f0 !important;  /* Light grey on hover */
+}
+
+/* Table of contents */
+.sidebar nav[role=doc-toc] ul li a {
+    color: white !important;
+}
+
+/* All text in Times New Roman */
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Make sure links are visible */
+a {
+    color: #93c5fd !important;  /* Light blue for links */
+}
+
+a:hover {
+    color: #dbeafe !important;  /* Lighter blue on hover */
+}
