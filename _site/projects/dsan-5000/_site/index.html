@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Viviana Luccioli">
 
 <title>Hidden Numbers: An Exploration of Factors that Influence Human Trafficking Detection and Government Response in Europe – DSAN-5000: Project</title>
 <style>
@@ -56,10 +57,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -89,6 +90,7 @@ div.csl-indent {
 }</script>
 
 
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -187,6 +189,12 @@ div.csl-indent {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Viviana Luccioli </p>
+          </div>
+  </div>
     
   
     
@@ -197,7 +205,7 @@ div.csl-indent {
 </header>
 
 
-<p><img src="assets/symbol.png" class="img-fluid"></p>
+<p><img src="assets/pic4.png" class="img-fluid"></p>
 <p>Human trafficking is the fastest growing criminal industry in the world. As defined by the United Nations Office on Drugs and Crime, human trafficking is the recruitment, transportation, transfer, harboring or receipt of people through force, fraud or deception, with the aim of exploiting them for profit. 27.6 million people worldwide are estimated to be victims of human trafficking at this moment, but given the complex and underground nature of the crime, it is difficult to know what the true prevalence is.</p>
 <p>The complex nature of the crime implicates the need for multi-faceted, comprehensive approaches to assessing problems in its domain. In particular, evaluating how well governments are prepared to stop human trafficking and how much effort they put into saving people from the crime must be approached with careful consideration of many indirect indicators. By leveraging data science techniques for data collection, cleaning, visualization and analysis, as well as methods in unsupervised and supervised machine learning, this project aims to shed light on what indicators may be influential to explaining human trafficking trends and government responses in a country, promoting further research into those areas. To perform this task, extensive research was conducted to gain information on what variables are impactful for human trafficking. The literature review synthesizing the main themes, drivers, and complications of human trafficking can be found below.</p>
 <p>To this end, this project was guided by these five research questions:</p>
@@ -214,9 +222,27 @@ div.csl-indent {
 <p><strong>Human trafficking trends in Europe</strong></p>
 <p>As human trafficking is a complex, underground crime, it is difficult to perform research that holistically represents the true story of human trafficking trends. However, the EUROSTAT Report of 2022 on Trafficking in human being statistics aimed to provide some insight into available characteristics by analysing the nationalities of detected victims in the location in which they were detected. The report found that across the entire EU in 2022, 25.1 % of registered victims came from the reporting country while 11.8 % were from other EU countries and 63.1 % from non-EU countries. The report also found that human trafficking victims’ citizenship considerably varies across the EU. The reported detected victims from countries such as Bulgaria, Romania, Hungary, Slovakia, Croatia, Latvia, Lithuania, and Czechia, which are all located in Eastern Europe, were mainly citizens of the country in which they were detected. However, in 2022, more than 80 % of registered victims in Denmark, Finland, Portugal, Spain, Malta, Greece, Belgium, Luxembourg, Italy and Estonia came from non-EU countries.<span class="citation" data-cites="eurostat2022"><sup><a href="#ref-eurostat2022" role="doc-biblioref">1</a></sup></span> This delivers crucial insights into not only the government responses to human trafficking, but also how the conditions in countries may drive human trafficking in their own population. This calls for investigation into how open border policy, the acceptance of refugees, and internal political stability influence national human trafficking trends. However, the EU Parliament’s 2023 briefing on human trafficking brought into discussion how trends in human trafficking are likely to change unprecendently in the wake of the extreme conditions of COVID-19 and the war in Ukraine in the last few years.<span class="citation" data-cites="euparliament2023"><sup><a href="#ref-euparliament2023" role="doc-biblioref">2</a></sup></span> The briefing emphasizes the need for coordinated efforts among EU Member States to address the increased risks of trafficking as a result of these crises and warns that new methods of tackling human trafficking may need to be adapted.</p>
 <p><strong>Determinants and drivers of trafficking</strong></p>
-<p>Across the research, several indicators were identified as potentially influencing human trafficking. A Swedish Masters’ thesis found that the type of prostitution policy and degree if law enforcement play roles in driving the inflow of human trafficking victims. Prostitution policy varies across European countries, with five main categories of policy type: legal, abolitionism, neoabolitionism, decriminalization, and prohibition.<span class="citation" data-cites="swedishthesis2016"><sup><a href="#ref-swedishthesis2016" role="doc-biblioref">3</a></sup></span> However, this contrasts with a study by<span class="citation" data-cites="modernslavery2015"><sup><a href="#ref-modernslavery2015" role="doc-biblioref">4</a></sup></span> from 2015 which finds that nations with policies that legalize or regulate prostitution do not have significantly different trafficking flows. Rather, institutional enforcement and governance play a more critical role in limiting exploitation in the prostitution market. This study finds that weaker institutional quality (including political stability and the corruption in the justice system and law enforcement) significantly facilitates trafficking in a country– because traffickers prefer to operate in place with low detection and prosecution risks. This study also emphasizes that border policies play an important role in determining trafficking flow and prevalence in a country, finding that countries with visa-free short-term entry from source countries experience increased trafficking flows, but this effect diminishes if long-term stays are allowed. Another study from 2017 by<span class="citation" data-cites="tallmadge2017"><sup><a href="#ref-tallmadge2017" role="doc-biblioref">5</a></sup></span> finds that higher rates of trafficking are predicted in nations where immigrants are a larger share of the population, as well as when there is access to the sea, the GDP per capita is low, and the level of unemployment is high. When controlled for these indicators, the study also finds that legalized prostitution increases the rate of human trafficking. These varying and contradicting identified factors highlight how complex the crime of human trafficking is and how important it is to assess trafficking outcomes from a comprehensive approach.</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>Across the research, several indicators were identified as potentially influencing human trafficking. A Swedish Masters’ thesis found that the type of prostitution policy and degree if law enforcement play roles in driving the inflow of human trafficking victims. Prostitution policy varies across European countries, with five main categories of policy type: legal, abolitionism, neoabolitionism, decriminalization, and prohibition.<span class="citation" data-cites="swedishthesis2016"><sup><a href="#ref-swedishthesis2016" role="doc-biblioref">3</a></sup></span> However, this contrasts with a study by<span class="citation" data-cites="modernslavery2015"><sup><a href="#ref-modernslavery2015" role="doc-biblioref">4</a></sup></span> from 2015 which finds that nations with policies that legalize or regulate prostitution do not have significantly different trafficking flows. Rather, institutional enforcement and governance play a more critical role in limiting exploitation in the prostitution market. This study finds that weaker institutional quality (including political stability and the corruption in the justice system and law enforcement) significantly facilitates trafficking in a country– because traffickers prefer to operate in place with low detection and prosecution risks.</p>
+</div><div class="column" style="width:10%;">
+<!-- empty column to create gap -->
+</div><div class="column" style="width:45%;">
+<p><img src="assets/pic6.png" class="img-fluid"></p>
+</div>
+</div>
+<p>This study also emphasizes that border policies play an important role in determining trafficking flow and prevalence in a country, finding that countries with visa-free short-term entry from source countries experience increased trafficking flows, but this effect diminishes if long-term stays are allowed. Another study from 2017 by<span class="citation" data-cites="tallmadge2017"><sup><a href="#ref-tallmadge2017" role="doc-biblioref">5</a></sup></span> finds that higher rates of trafficking are predicted in nations where immigrants are a larger share of the population, as well as when there is access to the sea, the GDP per capita is low, and the level of unemployment is high. When controlled for these indicators, the study also finds that legalized prostitution increases the rate of human trafficking. These varying and contradicting identified factors highlight how complex the crime of human trafficking is and how important it is to assess trafficking outcomes from a comprehensive approach.</p>
 <p><strong>Challenges to addressing human trafficking</strong></p>
-<p>A few research articles evaluated and discussed the challenges to addressing human trafficking in Europe– specifically, how to identify victims and prosecute traffickers. One study brought into conversation how aside from judicial, political, population and financial indicators, personal and cultural biases affect human trafficking responses. The study discussed how criminal justice actors’ decisions about human trafficking cases (identifying true victims or prosecuting true offenders) is influenced by perceptions of if the victim aligns with stereotypes of a “genuine victim”, and victims not conforming to this stereotype (specifially in cases like forced prostitution) may be misclassified and not given the care and help they need.<span class="citation" data-cites="cooperetal2024"><sup><a href="#ref-cooperetal2024" role="doc-biblioref">6</a></sup></span> This only perpetuates the trend of victims to be hesitant coming forwards to seek help for their situation. This review article also emphasized its finding that prosecution of human trafficking cases is still highly dependent on the willingness or ability of a victim to cooperate, which often faces challenges due to mistrust in the law enforcement system. Another study further supports this notion, emphasizing how the fear of prosecution prevents many victims from reporting their exploitation to law enforcement, causing lower detection rates of trafficking cases.<span class="citation" data-cites="rodriguezlopezetal2024"><sup><a href="#ref-rodriguezlopezetal2024" role="doc-biblioref">7</a></sup></span> The authors note that this fear is compounded by traffickers’ deliberate use of threats, such as telling victims they will not be believed or that they will face jail time or deportation. The study suggests that a lack of training and awareness among law enforcement officers further exacerbates this issue, as many are unable to distinguish between offenders and trafficking victims coerced into criminal activity. The implementation of victim nonpunishment policy, which was discussed across the literature and unpacked in more detail in the next theme, could help mitigate the problem of victims’ apprehension of approaching law enforcement. A 2016 study dicusses how cross-border cooperation and collaboration are necessary to mitigate cross-border challenges in prosecution and law enforcement efforts.<span class="citation" data-cites="bosma2024"><sup><a href="#ref-bosma2024" role="doc-biblioref">8</a></sup></span> This is an important problem, because previous research highlighted that a share of trafficking victims detected within a country are often foreigners.</p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><img src="assets/pic5.png" class="img-fluid"></p>
+</div><div class="column" style="width:10%;">
+<!-- empty column to create gap -->
+</div><div class="column" style="width:45%;">
+<p>A few research articles evaluated and discussed the challenges to addressing human trafficking in Europe– specifically, how to identify victims and prosecute traffickers. One study brought into conversation how aside from judicial, political, population and financial indicators, personal and cultural biases affect human trafficking responses. The study discussed how criminal justice actors’ decisions about human trafficking cases (identifying true victims or prosecuting true offenders) is influenced by perceptions of if the victim aligns with stereotypes of a “genuine victim”, and victims not conforming to this stereotype (specifially in cases like forced prostitution) may be misclassified and not given the care and help they need.<span class="citation" data-cites="cooperetal2024"><sup><a href="#ref-cooperetal2024" role="doc-biblioref">6</a></sup></span> This only perpetuates the trend of victims to be hesitant coming forwards to seek help for their situation. This review article also emphasized its finding that prosecution of human trafficking cases is still highly dependent on the willingness or ability of a victim to cooperate, which often faces challenges due to mistrust in the law enforcement system.</p>
+</div>
+</div>
+<p>Another study further supports this notion, emphasizing how the fear of prosecution prevents many victims from reporting their exploitation to law enforcement, causing lower detection rates of trafficking cases.<span class="citation" data-cites="rodriguezlopezetal2024"><sup><a href="#ref-rodriguezlopezetal2024" role="doc-biblioref">7</a></sup></span> The authors note that this fear is compounded by traffickers’ deliberate use of threats, such as telling victims they will not be believed or that they will face jail time or deportation. The study suggests that a lack of training and awareness among law enforcement officers further exacerbates this issue, as many are unable to distinguish between offenders and trafficking victims coerced into criminal activity. The implementation of victim nonpunishment policy, which was discussed across the literature and unpacked in more detail in the next theme, could help mitigate the problem of victims’ apprehension of approaching law enforcement. A 2016 study dicusses how cross-border cooperation and collaboration are necessary to mitigate cross-border challenges in prosecution and law enforcement efforts.<span class="citation" data-cites="bosma2024"><sup><a href="#ref-bosma2024" role="doc-biblioref">8</a></sup></span> This is an important problem, because previous research highlighted that a share of trafficking victims detected within a country are often foreigners.</p>
 <p><strong>Policy implementation and effectiveness</strong></p>
 <p>According to the reviewed literature, adherence to EU and international policy guidelines and the appropriate implementation of measures is a considerable concern for European countries’ responses to human trafficking. A study conducted at Tillburg University discusses how although the nonpunishment principle for victims of trafficking is embedded in EU law, its practical application is inconsistent.<span class="citation" data-cites="rijken2014"><sup><a href="#ref-rijken2014" role="doc-biblioref">9</a></sup></span> The nonpunishment principle is the practice of victim immunity from prosecution when coming forward, reporting the crime of human trafficking, and cooperating with law enforcement through the process of the investigation. As victims of human trafficking often are forced into illegal actions (such as prostitution, the distribution of drugs, and undocumented immigration), many victims harbor the fear that they if they come forwards to law enforcement, they will face punishment for the crimes they were forced to commit.<span class="citation" data-cites="rodriguezlopezetal2024"><sup><a href="#ref-rodriguezlopezetal2024" role="doc-biblioref">7</a></sup></span> provides examples from <a href="https://www.coe.int/en/web/anti-human-trafficking/greta">GRETA</a> (The Council of Europe’s Group of Experts on Action against Trafficking in Human Beings) reports in which countries with strong non-punishment policies (such as Germany and Cyprus) demonstrate better victim identification and cooperation compared to those without explicit protections. However, this study also finds that even in countries with non-punishment policies for criminal offenses, victims may still face administrative penalties (e.g., deportation for undocumented migration), which undermines their ability to report crimes or access support services.</p>
 <p><strong>U.S. Department of State Tier Placements</strong></p>
@@ -362,8 +388,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -474,7 +498,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
