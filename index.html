@@ -69,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -145,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="columns">
 <div class="column" style="width:45%;">
-<p>Hi, I’m Viviana Luccioli! I’m currently a first year student in Georgetown University’s M.S. in Data Science and Analytics program. I graduated from the University of Virginia in 2024 with double majors in Applied Statistics with a concentration in Biostatistics (B.A.) and Global Public Health (B.A.). In the summer of 2025, I’ll be interning as a Statistician and Data Analyst in the Federal Reserve Board’s Information and Technology Department in Washington, D.C. Previously, I interned as a Data Manager and Engineer for City of Promisem a local nonprofit providing services to combat generational poverty in Charlottesville, Virginia. I also have extensive research experience, including an internship as a research assistant for a professor’s contract in developing the international guidelines on controlled medicine policy for the World Health Organization. I also have experience as an assistant on a Swedish research team investigating trafficking in human beings for the purpose of organ removal in Stockholm.</p>
+<p>Hi, I’m Viviana Luccioli! I’m currently a first year student in Georgetown University’s M.S. in Data Science and Analytics program. I graduated from the University of Virginia in 2024 with double majors in Applied Statistics with a concentration in Biostatistics (B.A.) and Global Public Health (B.A.). In the summer of 2025, I’ll be interning as a Statistician and Data Analyst in the Federal Reserve Board’s Information and Technology Department in Washington, D.C. Previously, I interned as a Data Manager and Engineer for City of Promise, a local nonprofit providing services to combat generational poverty in Charlottesville, Virginia. I also have extensive research experience, including an internship as a research assistant for a professor’s contract in developing the international guidelines on controlled medicine policy for the World Health Organization. I also have experience as an assistant on a Swedish research team investigating trafficking in human beings for the purpose of organ removal in Stockholm.</p>
 </div><div class="column" style="width:10%;">
 <!-- empty column to create gap -->
 </div><div class="column" style="width:45%;">
@@ -250,7 +251,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/viviluccioli\.github\.io\/portfolio\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
