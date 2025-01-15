@@ -18,7 +18,7 @@
     "href": "index.html#tech-stack-skills",
     "title": "\n👋 Hey! I’m Viviana\n",
     "section": "🛠 Tech Stack & Skills",
-    "text": "🛠 Tech Stack & Skills\n\nLanguages & Core Tools\n     \n\n\nLibraries & Frameworks\n\nPython Ecosystem\n   \n\n\nR Ecosystem\n \n\n\n\nDevelopment Tools\n  \n\n\nStatistical Methods & Data Skills\n\n📊 Machine Learning: Neural Networks, Random Forest Classification, Survival Analysis\n📈 Statistical Analysis: Bayesian Statistics, Multivariate Regression, Time Series Analysis\n🔍 Data Processing: Database Design, ETL Pipelines, Data Visualization\n📋 Domain Expertise: Epidemiological Analysis, Business Analytics"
+    "text": "🛠 Tech Stack & Skills\n\nLanguages & Core Tools\n     \n\n\nLibraries & Frameworks\n\nPython Ecosystem\n   \n\n\nR Ecosystem\n \n\n\n\nDevelopment Tools\n  \n\n\nStatistical Methods & Data Skills\n\n📊 Machine Learning: Supervised learning (regression and classification), unsupervised learning (PCA, t-SNE, k-Means, DBSCAN, Hierarchical clustering), reinforcement learning\n📈 Statistical Analysis: Bayesian Statistics, Multivariate Regression, Time Series Analysis, Survival Analysis\n🔍 Data Processing: Database Design, ETL Pipelines, Data Visualization, Tidy Data\n📋 Domain Expertise: Epidemiological Analysis, Business Analytics"
   },
   {
     "objectID": "index.html#lets-connect",
