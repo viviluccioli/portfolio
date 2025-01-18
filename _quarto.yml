@@ -22,6 +22,13 @@ website:
             href: projects/dsan-5000/_site/index.html
           - text: DSAN-5100
             href: projects/dsan-5100/_site/index.html
+    right: 
+      - href: "https://www.linkedin.com/in/viviana-luccioli-45a997207/"
+        icon: linkedin
+      - href: "mailto:viviluccioli@gmail.com"
+        icon: envelope
+      - href: "https://github.com/viviluccioli"
+        icon: github
 
 format:
   html:

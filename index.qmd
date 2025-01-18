@@ -1,33 +1,120 @@
+
+<h1 align="center">
+  Hey! I’m Viviana
+</h1>
+
+<p align="center">
+  Data Scientist | Statistician | Global Health Researcher
+</p>
+
+![](images/headshot.png)
+
+## 👩🏻‍💻 About Me
+
+I'm a M.S. student in Georgetown University's Data Science and Analytics program, enthusiastic about leveraging data science for social impact. With a vast range of academic, professional and cultural experiences, I bring a unique perspective and analytical toolset to teams attempting to address complex and multifaceted problems. 
+
+
+### 🎓 Education
+
+**Georgetown University**, 2024-2026
+
+- M.S. Data Science & Analytics
+
+**University of Virginia**, 2020-2024
+
+- B.A. Applied Statistics
+- B.A. Global Public Health
+
+### 💼 Experience
+
+**Research Assistant**, *AI Measurement & Development Lab*, Washington, DC
+
+- Part-time assistant in Dr. Qiwei (Britt) He's AIMD lab, in affiliation with Georgetown's Data Science and Analytics program
+- Comprehensively scanned and extracted key information on the technical characteristics and methods of psychometric data capturing of various virtual reality (VR) tools in educational settings
+- Performed statistical analysis on the trends in technical components of VR in education across the literature
+
+**Data Management & Engineer Intern**, *City of Promise*, Charlottesville, VA
+
+- Contributed to the configuration of a new internal database and created a tailored self sufficiency matrix encapsulating 16 variables with 5 category scores to quantify the socioeconomic and personal impact of the program on individuals and families
+- Consulted the leadership board on data-driven methods and strategies for community polling and data collection
+- Assisted in the creation and deployment of the organization’s database and taught staff how to input and extract data
+- Performed data analytics and communicated findings through presentations and creating executive summary reports for fundraising and board meetings
+
+**Research Assistant**, *Danish Institute of Scandinavia*, Stockholm, Sweden 
+
+- Worked closely with a Swedish research team to contribute to a long-term, multidimensional project examining illicit organ trafficking while studying abroad in Stockholm, Sweden
+- Parsed the dark web for insight and interviewed medical and organ-related professionals around the world
+- Contributed to a team literature review synthesizing over 40 studies, that is currently under review for publication
+
+**Research Assistant**, *World Health Organization*, Charlottesville, VA
+
+- Selected by a professor to assist in the research for informing the rewriting of WHO guidelines
+- Revised international guidelines on controlled medicine policy by conducting vast web scanning, data extraction and synthesis on over 200 sudies, and writing a literature review and reported my formatted findings to the project lead
+- Gained insight into IGO policy development and deepened my research skills
+
+**Dance Instructor**, *iCan Shine*
+
+- Traveled independently among 4 different states to instruct week-long camps and led communication with host facilities
+- Choreographed and taught dance routines five times a day to classes of up to 30 individuals with disabilities
+- Wrote disability awareness lesson plans and educated typically developing volunteers
+
+
+### 📚 Projects
+
+- Hidden Numbers: Data Science Exploration of Factors that Influence Human Trafficking Detection and Government Response in Europe
+- Data vs. Dogma: Analysis of Maternal Wellness Conditions and Abortion Policy per State
+- Ticking Time: Modeling Lyme Disease in 2050 in U.S. Regions under the RCP 8.5 Climate Scenario
+
+
+### 🧐 Interests
+
+- 💬 Computational linguistics and NLP for translation
+- 📖 Machine learning
+- 🗺️ GIS
+- 📊 Interactive data visualization
+- 🧠 Social epidemiology and global health equity
+- 🌎 Human trafficking research and surveillance
+
+
+## 🛠 Tech Stack & Skills
+
+### Languages & Core Tools
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://www.r-project.org/)
+[![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![SAS](https://img.shields.io/badge/SAS-1C7CD6?style=for-the-badge&logo=sas&logoColor=white)](https://www.sas.com/)
+[![SPSS](https://img.shields.io/badge/SPSS-052FAD?style=for-the-badge&logo=ibm&logoColor=white)](https://www.ibm.com/products/spss-statistics)
+
+### Libraries & Frameworks
+#### Python Ecosystem
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+
+#### R Ecosystem
+[![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://ggplot2.tidyverse.org/)
+[![tidyverse](https://img.shields.io/badge/tidyverse-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://www.tidyverse.org/)
+
+### Development Tools
+[![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://www.tableau.com/)
+
+### Statistical Methods & Data Skills
+- 📊 **Machine Learning**: Supervised learning (regression and classification), unsupervised learning (PCA, t-SNE, k-Means, DBSCAN, Hierarchical clustering), reinforcement learning
+- 📈 **Statistical Analysis**: Bayesian Statistics, Multivariate Regression, Time Series Analysis, Survival Analysis
+- 🔍 **Data Processing**: Database Design, ETL Pipelines, Data Visualization, Tidy Data
+- 📋 **Domain Expertise**: Epidemiological Analysis, Business Analytics
+
+
+
+## 🌐 Let's Connect
+<p align="left">
+  <a href="https://www.linkedin.com/in/viviana-luccioli-45a997207/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="viviana-luccioli" height="30" width="40" /></a>
+  <a href="mailto:viviluccioli@gmail.com"><img align="center" src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" alt="Gmail" height="30" width="40" /></a>
+</p>
+</p>
+
 ---
-title: "About me"
----
-
-:::: {.columns}
-
-::: {.column width="45%"}
-
-
-
-Hi, I'm Viviana Luccioli! I'm currently a first year student in Georgetown University's M.S. in Data Science and Analytics program. I graduated from the University of Virginia in 2024 with double majors in Applied Statistics with a concentration in Biostatistics (B.A.) and Global Public Health (B.A.). In the summer of 2025, I'll be interning as a Statistician and Data Analyst in the Federal Reserve Board's Information and Technology Department in Washington, D.C. Previously, I interned as a Data Manager and Engineer for City of Promise, a local nonprofit providing services to combat generational poverty in Charlottesville, Virginia. I also have extensive research experience, including an internship as a research assistant for a professor's contract in developing the international guidelines on controlled medicine policy for the World Health Organization. I also have experience as an assistant on a Swedish research team investigating trafficking in human beings for the purpose of organ removal in Stockholm.
-
-:::
-
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="45%"}
-
-![](images/headshot2.png)
-
-:::
-
-::::
-
-At Georgetown, I'm acitvely involved in my graduate program, working part time as a research assistant in Dr. Qiwei He's AI Measurement and Development lab, where I'm contributing to technical research review on the development of VR technology for educational assistance as well as performing quantitative analysis on educational behavioral data. I'm also a student academic assistant in the Professional Development Center, where I meets one on one to mentor students through resumes, cover letter writing, and interview preparation for data science roles. I also write blogs for the program website-- feel free to check them out [here!](https://analytics.georgetown.edu/category/blog-posts/) Lastly, I'm a teaching assistant for DSAN 6150: Biological and Biomedical Data Science. 
-
-My multidisciplinary background and experiences in a vast range of professional and academic settings have shaped my effective communication skills, adaptability to working in new groups, and well-rounded and contextually-cognizant approach to data problems. Furthermore, I'm fluent in Italian and Spanish, and I love meeting people with different backgrounds than mine (whether that be culturally or academically). I'm passionate about harnessing my unique perspective and analytical skills to catalyze data-driven solutions that create meaningful social impact. 
-
-If you have any questions or even just want to chat, feel free to reach out to me at vcl16@georgetown.edu -- I'm always happy to make a new connection. :)
-
-[Linkedin](https://www.linkedin.com/in/viviana-luccioli-45a997207/) | [GitHub](https://github.com/viviluccioli)
