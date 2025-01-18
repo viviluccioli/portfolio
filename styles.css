@@ -1,8 +1,12 @@
 /* Main background and text */
 body {
-    background-color: #1a365d;  /* Dark blue */
-    color: white !important;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    background-attachment: fixed; /* Ensures smooth scrolling */
+    background-size: cover;
+    color: white;  /* Ensures readability */
 }
+
+
 
 /* Make content area match background */
 .content-container, 
@@ -15,6 +19,11 @@ main {
 /* Navigation bar */
 .navbar {
     background-color: #0f172a !important;  /* Darker blue */
+} 
+
+.navbar a:hover {
+    color: #ffcc00;  /* Gold color */
+    transition: 0.3s ease-in-out;
 }
 
 /* Navigation text */
@@ -48,3 +57,4 @@ a {
 a:hover {
     color: #dbeafe !important;  /* Lighter blue on hover */
 }
+
