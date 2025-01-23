@@ -18,12 +18,17 @@ I'm a M.S. student in Georgetown University's Data Science and Analytics program
 
 **Georgetown University**, 2024-2026
 
-- M.S. Data Science & Analytics
+*M.S. Data Science & Analytics*
+
+- Professional Development Center assistant (check out my blogs [here!](https://analytics.georgetown.edu/blog-posts/sex-and-gender-bias-considerations-for-data-science/))
+- *Coursework:* Data Science and Analytics, Probabilistic Modeling and Statistical Computing, Data Science for Climate Change, Statistical Learning, Data Visualization, Computational Linguistics with Advanced Python
 
 **University of Virginia**, 2020-2024
 
-- B.A. Applied Statistics
-- B.A. Global Public Health
+*B.A. Applied Statistics + B.A. Global Public Health*
+
+- President of the Global Infectious Diseases Association
+- Madison House volunteer
 
 ### 👩🏻‍💻 Experience
 
@@ -66,7 +71,7 @@ I'm a M.S. student in Georgetown University's Data Science and Analytics program
 - Ticking Time: Modeling Lyme Disease in 2050 in U.S. Regions under the RCP 8.5 Climate Scenario
 
 
-### ⭐Interests
+### ⭐ Interests
 
 - 💬 Computational linguistics and NLP for translation
 - 📖 Machine learning
@@ -76,7 +81,15 @@ I'm a M.S. student in Georgetown University's Data Science and Analytics program
 - 🌎 Human trafficking research and surveillance
 
 
-## 💡Tech Stack & Skills
+### 🌎 Other 
+
+- I speak English, Italian, and Spanish! (and a bit of French)
+- I'm an Italian citizen 
+- Former piano and voice instructor to young children 
+- Originally from Falls Church, VA 
+
+
+## 💡 Tech Stack & Skills
 
 ### Languages & Core Tools
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -103,15 +116,19 @@ I'm a M.S. student in Georgetown University's Data Science and Analytics program
 [![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://www.tableau.com/)
 
 ### Statistical Methods & Data Skills
-- 📊 **Machine Learning**: Supervised learning (regression and classification), unsupervised learning (PCA, t-SNE, k-Means, DBSCAN, Hierarchical clustering), reinforcement learning
-- 📈 **Statistical Analysis**: Bayesian Statistics, Multivariate Regression, Time Series Analysis, Survival Analysis
-- 🔍 **Data Processing**: Database Design, ETL Pipelines, Data Visualization, Tidy Data
-- 📋 **Domain Expertise**: Epidemiological Analysis, Business Analytics
+- 📊 **Machine Learning**: Optimization and gradient descent, supervised learning (regression and classification), unsupervised learning (dimensionality reduction, clustering, anomaly detection), reinforcement learning
+- 📈 **Statistical analysis**: Bayesian statistics, multivariate regression, time series analysis, survival analysis, business analytics
+- 🔍 **Data processing**: Database design, text mining, data management & engineering, data visualization, tidy data
 
 
 
-## 💌Let's Connect
+## 💌 Let's Connect
 <p align="left">
+
+I love meeting new people and learning from them! I would be happy to hear from you if you have any questions about my experience, are looking to collaborate on a project, or just want to chat.
+
+(And I am also always open to book recommendations 😊 )
+
   <a href="https://www.linkedin.com/in/viviana-luccioli-45a997207/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="viviana-luccioli" height="30" width="40" /></a>
   <a href="mailto:viviluccioli@gmail.com"><img align="center" src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" alt="Gmail" height="30" width="40" /></a>
 </p>
