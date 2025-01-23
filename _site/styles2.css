@@ -1,0 +1,114 @@
+/* Fixed continuous gradient background */
+body {
+    /* Ensure the gradient covers the full viewport height */
+    min-height: 100vh;
+    margin: 0;
+    /* Create a smooth, continuous gradient */
+    background: linear-gradient(180deg, 
+        #1e3c72 0%,
+        #2a5298 35%,
+        #1a365d 70%,
+        #0f172a 100%
+    );
+    /* Keep gradient fixed while content scrolls */
+    background-attachment: fixed;
+    /* Ensure gradient covers the entire area */
+    background-size: 100% 100%;
+    /* Prevent gradient from repeating */
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: #0f172a !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Portfolio brand text */
+.navbar-brand {
+    color: #93c5fd !important;  /* Light blue color */
+}
+
+/* General navbar links */
+.nav-link {
+    color: white !important;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+/* Remove default dropdown indicator */
+.navbar .dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Hover effect for navbar items */
+.nav-link:hover {
+    color: #e2e8f0 !important;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #93c5fd !important;
+}
+
+/* Animated navigation links */
+.nav-link {
+    position: relative;
+    color: white !important;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #93c5fd;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Ensure content container is transparent */
+.content-container, 
+.content,
+main {
+    /* Use rgba for background to maintain transparency */
+    background: rgba(26, 54, 93, 0.3) !important;
+    /* Add subtle backdrop blur for depth */
+    backdrop-filter: blur(5px);
+    /* Remove any default backgrounds */
+    background-image: none !important;
+}
+
+/* Optional: Add smooth transition between sections */
+section {
+    transition: background-color 0.3s ease;
+}
+
+/* Add to your styles.css */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
