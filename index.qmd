@@ -1,0 +1,137 @@
+
+<h1 align="center">
+  Hey! I’m Viviana
+</h1>
+
+<p align="center">
+  Data Scientist | Statistician | Global Health Researcher
+</p>
+
+![](images/headshot.png)
+
+## About Me
+
+I'm a M.S. student in Georgetown University's Data Science and Analytics program, enthusiastic about leveraging data science for social impact. With a vast range of academic, professional and cultural experiences, I bring a unique perspective and analytical toolset to teams attempting to address complex and multifaceted problems. 
+
+
+### 🎓 Education
+
+**Georgetown University**, 2024-2026
+
+*M.S. Data Science & Analytics*
+
+- Professional Development Center assistant (check out my blogs [here!](https://analytics.georgetown.edu/blog-posts/sex-and-gender-bias-considerations-for-data-science/))
+- *Coursework:* Data Science and Analytics, Probabilistic Modeling and Statistical Computing, Data Science for Climate Change, Statistical Learning, Data Visualization, Computational Linguistics with Advanced Python
+
+**University of Virginia**, 2020-2024
+
+*B.A. Applied Statistics + B.A. Global Public Health*
+
+- President of the Global Infectious Diseases Association
+- Madison House volunteer
+
+### 👩🏻‍💻 Experience
+
+**Research Assistant**, *AI Measurement & Development Lab*, Washington, DC
+
+- Part-time assistant in Dr. Qiwei (Britt) He's AIMD lab, in affiliation with Georgetown's Data Science and Analytics program
+- Comprehensively scanned and extracted key information on the technical characteristics and methods of psychometric data capturing of various virtual reality (VR) tools in educational settings
+- Performed statistical analysis on the trends in technical components of VR in education across the literature
+
+**Data Management & Engineer Intern**, *City of Promise*, Charlottesville, VA
+
+- Contributed to the configuration of a new internal database and created a tailored self sufficiency matrix encapsulating 16 variables with 5 category scores to quantify the socioeconomic and personal impact of the program on individuals and families
+- Consulted the leadership board on data-driven methods and strategies for community polling and data collection
+- Assisted in the creation and deployment of the organization’s database and taught staff how to input and extract data
+- Performed data analytics and communicated findings through presentations and creating executive summary reports for fundraising and board meetings
+
+**Research Assistant**, *Danish Institute of Scandinavia*, Stockholm, Sweden 
+
+- Worked closely with a Swedish research team to contribute to a long-term, multidimensional project examining illicit organ trafficking while studying abroad in Stockholm, Sweden
+- Parsed the dark web for insight and interviewed medical and organ-related professionals around the world
+- Contributed to a team literature review synthesizing over 40 studies, that is currently under review for publication
+
+**Research Assistant**, *World Health Organization*, Charlottesville, VA
+
+- Selected by a professor to assist in the research for informing the rewriting of WHO guidelines
+- Revised international guidelines on controlled medicine policy by conducting vast web scanning, data extraction and synthesis on over 200 sudies, and writing a literature review and reported my formatted findings to the project lead
+- Gained insight into IGO policy development and deepened my research skills
+
+**Dance Instructor**, *iCan Shine*
+
+- Traveled independently among 4 different states to instruct week-long camps and led communication with host facilities
+- Choreographed and taught dance routines five times a day to classes of up to 30 individuals with disabilities
+- Wrote disability awareness lesson plans and educated typically developing volunteers
+
+
+### 📚 Projects 
+
+- Hidden Numbers: Data Science Exploration of Factors that Influence Human Trafficking Detection and Government Response in Europe
+- Data vs. Dogma: Analysis of Maternal Wellness Conditions and Abortion Policy per State
+- Ticking Time: Modeling Lyme Disease in 2050 in U.S. Regions under the RCP 8.5 Climate Scenario
+
+
+### ⭐ Interests
+
+- 💬 Computational linguistics and NLP for translation
+- 📖 Machine learning
+- 🗺️ GIS
+- 📊 Interactive data visualization
+- 🧠 Social epidemiology and global health equity
+- 🌎 Human trafficking research and surveillance
+
+
+### 🌎 Other 
+
+- I speak English, Italian, and Spanish! (and a bit of French)
+- I'm an Italian citizen 
+- Former piano and voice instructor to young children 
+- Originally from Falls Church, VA 
+
+
+## 💡 Tech Stack & Skills
+
+### Languages & Core Tools
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://www.r-project.org/)
+[![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![SAS](https://img.shields.io/badge/SAS-1C7CD6?style=for-the-badge&logo=sas&logoColor=white)](https://www.sas.com/)
+[![SPSS](https://img.shields.io/badge/SPSS-052FAD?style=for-the-badge&logo=ibm&logoColor=white)](https://www.ibm.com/products/spss-statistics)
+
+### Libraries & Frameworks
+#### Python Ecosystem
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+
+#### R Ecosystem
+[![ggplot2](https://img.shields.io/badge/ggplot2-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://ggplot2.tidyverse.org/)
+[![tidyverse](https://img.shields.io/badge/tidyverse-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://www.tidyverse.org/)
+
+### Development Tools
+[![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://www.tableau.com/)
+
+### Statistical Methods & Data Skills
+- 📊 **Machine Learning**: Optimization and gradient descent, supervised learning (regression and classification), unsupervised learning (dimensionality reduction, clustering, anomaly detection), reinforcement learning
+- 📈 **Statistical analysis**: Bayesian statistics, multivariate regression, time series analysis, survival analysis, business analytics
+- 🔍 **Data processing**: Database design, text mining, data management & engineering, data visualization, tidy data
+
+
+
+## 💌 Let's Connect
+<p align="left">
+
+I love meeting new people and learning from them! I would be happy to hear from you if you have any questions about my experience, are looking to collaborate on a project, or just want to chat.
+
+(And I am also always open to book recommendations 😊 )
+
+  <a href="https://www.linkedin.com/in/viviana-luccioli-45a997207/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="viviana-luccioli" height="30" width="40" /></a>
+  <a href="mailto:viviluccioli@gmail.com"><img align="center" src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" alt="Gmail" height="30" width="40" /></a>
+</p>
+</p>
+
+---
