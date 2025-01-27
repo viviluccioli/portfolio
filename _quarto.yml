@@ -9,8 +9,8 @@ project:
     - projects/dsan-5100/_site
 
 website:
-  title: "Portfolio"
-  favicon: "images/gu-logo.png"
+  title: "Viviana Luccioli"
+  favicon: "images/v.png"
   navbar:
     left:
       - href: index.qmd
