@@ -10,7 +10,7 @@ project:
 
 website:
   title: "Viviana Luccioli"
-  favicon: "images/v.png"
+  favicon: "images/v_circle2.png"
   navbar:
     left:
       - href: index.qmd
