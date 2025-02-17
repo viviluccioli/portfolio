@@ -10,7 +10,7 @@ project:
 
 website:
   title: "Viviana Luccioli"
-  favicon: "images/v_circle2.png"
+  favicon: "images/v.png"
   navbar:
     left:
       - href: index.qmd
@@ -18,11 +18,13 @@ website:
 
       - text: "Projects"
         menu:
-          - text: DSAN-5000
+          - text: "Georgetown: Data Science & Analytics (DSAN 5000)"
             href: projects/dsan-5000/_site/index.html
-          - text: DSAN-5100
+          - text: "Georgetown: Probabilistic Modeling & Statistical Computing (DSAN 5100)"
             href: projects/dsan-5100/_site/index.html
-    right: 
+          - text: "UVA: Global Public Health Capstone Thesis"
+            href: projects/GPH-capstone/GPH_capstone.html
+    right:
       - href: "https://www.linkedin.com/in/viviana-luccioli-45a997207/"
         icon: linkedin
       - href: "mailto:viviluccioli@gmail.com"
