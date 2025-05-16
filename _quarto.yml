@@ -7,6 +7,8 @@ project:
   resources:
     - projects/dsan-5000/_site
     - projects/dsan-5100/_site
+    - projects/dsan-5200/docs
+    - projects/dsan-5400/docs
 
 website:
   title: "Viviana Luccioli"
@@ -24,6 +26,10 @@ website:
             href: projects/dsan-5100/_site/index.html
           - text: "UVA: Global Public Health Capstone Thesis"
             href: projects/GPH-capstone/GPH_capstone.html
+          - text: "Georgetown: Advanced Data Visualization (DSAN 5200)"
+            href: projects/dsan-5200/docs/index.html
+          - text: "Georgetown: Computational Linguistics (DSAN 5400)"
+            href: projects/dsan-5400/docs/index.html
     right:
       - href: "https://www.linkedin.com/in/viviana-luccioli-45a997207/"
         icon: linkedin
