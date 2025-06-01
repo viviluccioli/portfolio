@@ -92,11 +92,11 @@ title: "Resume"
 <table style="width: 100%; border: none; margin-top: 30px;">
 <tr style="vertical-align: top; border: none;">
   <td style="width: 60px; padding-right: 15px; border: none;">
-    <img src="images/company-logo.png" alt="Company" style="width: 50px; height: 50px; object-fit: contain;">
+    <img src="images/frb.png" alt="Company" style="width: 100px; height: 100px; object-fit: contain;">
   </td>
   <td style="border: none;">
-    <strong>Job Title</strong>, Date Range<br>
-    <em>Company Name</em>
+    <strong>Statistics & Data Managament Intern</strong>, May 2025 - <br>
+    <em>Federal Reserve Board</em>
     <ul>
       <li>Description of responsibilities and achievements</li>
       <li>Another key accomplishment</li>
@@ -104,8 +104,12 @@ title: "Resume"
     </ul>
   </td>
 </tr>
+
+
+
+<!-- 
 </table>ref="link-to-blogs">here</a>!)</li>
       <li class="coursework"><strong>Coursework:</strong> Data Science and Analytics, Probabilistic Modeling and Statistical Computing, Data Science for Climate Change, Statistical Learning, Data Visualization, Computational Linguistics with Advanced Python</li>
     </ul>
   </div>
-</div>
+</div> -->
