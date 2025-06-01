@@ -1,0 +1,106 @@
+---
+title: "My Projects"
+format:
+  html:
+    css: css/projects.css
+    theme: none
+---
+
+
+::: {#projects-container}
+
+::: {.project-section data-href="projects/dsan-5000/_site/index.html"}
+::: {.project-content}
+::: {.project-text}
+## Data Science & Analytics {.project-title}
+### Georgetown University • DSAN 5000 {.project-location}
+
+A comprehensive exploration of data science fundamentals, statistical analysis, 
+and predictive modeling techniques. This project demonstrates proficiency in 
+Python, R, and various machine learning algorithms applied to real-world datasets.
+{.project-description}
+:::
+
+::: {.project-image}
+!(images/5000.png)
+:::
+:::
+:::
+
+::: {.project-section .reverse data-href="projects/dsan-5100/_site/index.html"}
+::: {.project-content}
+::: {.project-text}
+## Probabilistic Modeling & Statistical Computing {.project-title}
+### Georgetown University • DSAN 5100 {.project-location}
+
+Advanced statistical computing techniques including Bayesian inference, 
+MCMC methods, and probabilistic programming. Implemented complex models 
+using Stan and PyMC3 for real-world statistical problems.
+{.project-description}
+:::
+
+::: {.project-image}
+!(images/5100.png)
+:::
+:::
+:::
+
+::: {.project-section data-href="projects/GPH-capstone/GPH_capstone.html"}
+::: {.project-content}
+::: {.project-text}
+## Global Public Health Capstone Thesis {.project-title}
+### University of Virginia • Public Health {.project-location}
+
+An in-depth analysis of global health disparities and intervention strategies. 
+Combined epidemiological research with data visualization to present findings 
+on health outcomes across different populations.
+{.project-description}
+:::
+
+::: {.project-image}
+!(images/5400.png)
+:::
+:::
+:::
+
+::: {.project-section .reverse data-href="projects/dsan-5200/docs/index.html"}
+::: {.project-content}
+::: {.project-text}
+## Advanced Data Visualization {.project-title}
+### Georgetown University • DSAN 5200 {.project-location}
+
+Interactive dashboards and compelling visual narratives using D3.js, 
+Plotly, and advanced ggplot2 techniques. Created responsive visualizations 
+that transform complex data into accessible insights.
+{.project-description}
+:::
+
+::: {.project-image}
+!(images/5200.png)
+:::
+:::
+:::
+
+:::
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const projectSections = document.querySelectorAll('.project-section');
+  
+  projectSections.forEach(section => {
+    section.addEventListener('click', function() {
+      const href = this.getAttribute('data-href');
+      
+      // Add highlight animation
+      this.classList.add('clicked');
+      
+      // Navigate after animation completes
+      setTimeout(() => {
+        window.location.href = href;
+      }, 600);
+    });
+  });
+});
+</script>
+```

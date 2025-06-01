@@ -1,0 +1,87 @@
+/* LinkedIn-style Resume Layout */
+.education-entry, .experience-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .education-entry:hover, .experience-entry:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .institution-logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .institution-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .entry-content {
+    flex: 1;
+  }
+  
+  .institution-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: white !important;
+  }
+  
+  .degree-title {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .entry-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .entry-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+    color: white !important;
+  }
+  
+  .entry-details li::before {
+    content: "•";
+    color: #a78bfa;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Coursework styling */
+  .coursework {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+  
+  /* Date styling */
+  .date-range {
+    color: #c4b5fd !important;
+    font-weight: 500;
+  }

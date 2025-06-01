@@ -1,3 +1,50 @@
+# project:
+#   type: website
+#   render:
+#     - "*.qmd"
+#     - "*.ipynb"
+#     - "!projects"
+#   resources:
+#     - projects/dsan-5000/_site
+#     - projects/dsan-5100/_site
+#     - projects/dsan-5200/docs
+#     - projects/dsan-5400/docs
+
+# website:
+#   title: "Viviana Luccioli"
+#   favicon: "images/v.png"
+#   navbar:
+#     left:
+#       - href: index.qmd
+#         text: Home
+#       - href: resume.qmd
+#         text: Resume
+#       - text: "Projects"
+#         menu:
+#           - text: "Georgetown: Data Science & Analytics (DSAN 5000)"
+#             href: projects/dsan-5000/_site/index.html
+#           - text: "Georgetown: Probabilistic Modeling & Statistical Computing (DSAN 5100)"
+#             href: projects/dsan-5100/_site/index.html
+#           - text: "UVA: Global Public Health Capstone Thesis"
+#             href: projects/GPH-capstone/GPH_capstone.html
+#           - text: "Georgetown: Advanced Data Visualization (DSAN 5200)"
+#             href: projects/dsan-5200/docs/index.html
+#           - text: "Georgetown: Computational Linguistics (DSAN 5400)"
+#             href: projects/dsan-5400/docs/index.html
+#     right:
+#       - href: "https://www.linkedin.com/in/viviana-luccioli-45a997207/"
+#         icon: linkedin
+#       - href: "mailto:viviluccioli@gmail.com"
+#         icon: envelope
+#       - href: "https://github.com/viviluccioli"
+#         icon: github
+
+# format:
+#   html:
+#     theme: cosmo
+#     css: styles2.css
+#     toc: true
+
 project:
   type: website
   render:
@@ -17,19 +64,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-
-      - text: "Projects"
-        menu:
-          - text: "Georgetown: Data Science & Analytics (DSAN 5000)"
-            href: projects/dsan-5000/_site/index.html
-          - text: "Georgetown: Probabilistic Modeling & Statistical Computing (DSAN 5100)"
-            href: projects/dsan-5100/_site/index.html
-          - text: "UVA: Global Public Health Capstone Thesis"
-            href: projects/GPH-capstone/GPH_capstone.html
-          - text: "Georgetown: Advanced Data Visualization (DSAN 5200)"
-            href: projects/dsan-5200/docs/index.html
-          - text: "Georgetown: Computational Linguistics (DSAN 5400)"
-            href: projects/dsan-5400/docs/index.html
+      - href: resume.qmd
+        text: Resume
+      - href: projects.qmd
+        text: Projects
     right:
       - href: "https://www.linkedin.com/in/viviana-luccioli-45a997207/"
         icon: linkedin
@@ -41,8 +79,5 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles2.css
+    css: css/styles3.css
     toc: true
-
-
-

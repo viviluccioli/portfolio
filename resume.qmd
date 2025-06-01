@@ -1,0 +1,111 @@
+---
+title: "Resume"
+---
+
+
+### Education
+
+**Georgetown University**, 2024-2026
+
+*M.S. Data Science & Analytics*
+
+- Professional Development Center assistant (check out my blogs [here!](https://analytics.georgetown.edu/blog-posts/sex-and-gender-bias-considerations-for-data-science/))
+- *Coursework:* Data Science and Analytics, Probabilistic Modeling and Statistical Computing, Data Science for Climate Change, Statistical Learning, Data Visualization, Computational Linguistics with Advanced Python
+
+**University of Virginia**, 2020-2024
+
+*B.A. Applied Statistics + B.A. Global Public Health*
+
+- President of the Global Infectious Diseases Association
+- Madison House volunteer
+
+### Experience
+
+**Research Assistant**, *AI Measurement & Development Lab*, Washington, DC
+
+- Part-time assistant in Dr. Qiwei (Britt) He's AIMD lab, in affiliation with Georgetown's Data Science and Analytics program
+- Comprehensively scanned and extracted key information on the technical characteristics and methods of psychometric data capturing of various virtual reality (VR) tools in educational settings
+- Performed statistical analysis on the trends in technical components of VR in education across the literature
+
+**Data Management & Engineer Intern**, *City of Promise*, Charlottesville, VA
+
+- Contributed to the configuration of a new internal database and created a tailored self sufficiency matrix encapsulating 16 variables with 5 category scores to quantify the socioeconomic and personal impact of the program on individuals and families
+- Consulted the leadership board on data-driven methods and strategies for community polling and data collection
+- Assisted in the creation and deployment of the organization’s database and taught staff how to input and extract data
+- Performed data analytics and communicated findings through presentations and creating executive summary reports for fundraising and board meetings
+
+**Research Assistant**, *Danish Institute of Scandinavia*, Stockholm, Sweden 
+
+- Worked closely with a Swedish research team to contribute to a long-term, multidimensional project examining illicit organ trafficking while studying abroad in Stockholm, Sweden
+- Parsed the dark web for insight and interviewed medical and organ-related professionals around the world
+- Contributed to a team literature review synthesizing over 40 studies, that is currently under review for publication
+
+**Research Assistant**, *World Health Organization*, Charlottesville, VA
+
+- Selected by a professor to assist in the research for informing the rewriting of WHO guidelines
+- Revised international guidelines on controlled medicine policy by conducting vast web scanning, data extraction and synthesis on over 200 sudies, and writing a literature review and reported my formatted findings to the project lead
+- Gained insight into IGO policy development and deepened my research skills
+
+**Dance Instructor**, *iCan Shine*
+
+- Traveled independently among 4 different states to instruct week-long camps and led communication with host facilities
+- Choreographed and taught dance routines five times a day to classes of up to 30 individuals with disabilities
+- Wrote disability awareness lesson plans and educated typically developing volunteers
+ -->
+
+## Education
+
+<table style="width: 100%; border: none;">
+<tr style="vertical-align: top; border: none;">
+  <td style="width: 60px; padding-right: 15px; border: none;">
+    <img src="images/gu-logo.png" alt="Georgetown" style="width: 100px; height: 100px; object-fit: contain;">
+  </td>
+  <td style="border: none;">
+    <strong>Georgetown University</strong>, 2024-2026<br>
+    <em>M.S. Data Science & Analytics</em>
+    <ul>
+      <li>Professional Development Center assistant (check out my blogs <a href="link-to-blogs">here</a>!)</li>
+      <li><strong>Coursework:</strong> Data Science and Analytics, Probabilistic Modeling and Statistical Computing, Data Science for Climate Change, Statistical Learning, Data Visualization, Computational Linguistics with Advanced Python</li>
+    </ul>
+  </td>
+</tr>
+</table>
+
+<table style="width: 100%; border: none; margin-top: 30px;">
+<tr style="vertical-align: top; border: none;">
+  <td style="width: 60px; padding-right: 15px; border: none;">
+    <img src="images/uva.png" alt="UVA" style="width: 100px; height: 100px; object-fit: contain;">
+  </td>
+  <td style="border: none;">
+    <strong>University of Virginia</strong>, 2020-2024<br>
+    <em>B.A. Applied Statistics + B.A. Global Public Health</em>
+    <ul>
+      <li>President of the Global Infectious Diseases Association</li>
+      <li>Madison House volunteer</li>
+    </ul>
+  </td>
+</tr>
+</table>
+
+## Experience
+
+<table style="width: 100%; border: none; margin-top: 30px;">
+<tr style="vertical-align: top; border: none;">
+  <td style="width: 60px; padding-right: 15px; border: none;">
+    <img src="images/company-logo.png" alt="Company" style="width: 50px; height: 50px; object-fit: contain;">
+  </td>
+  <td style="border: none;">
+    <strong>Job Title</strong>, Date Range<br>
+    <em>Company Name</em>
+    <ul>
+      <li>Description of responsibilities and achievements</li>
+      <li>Another key accomplishment</li>
+      <li>Quantified results when possible</li>
+    </ul>
+  </td>
+</tr>
+</table>ref="link-to-blogs">here</a>!)</li>
+      <li class="coursework"><strong>Coursework:</strong> Data Science and Analytics, Probabilistic Modeling and Statistical Computing, Data Science for Climate Change, Statistical Learning, Data Visualization, Computational Linguistics with Advanced Python</li>
+    </ul>
+  </div>
+</div>
