@@ -12,13 +12,10 @@ format:
 ::: {.project-section data-href="projects/dsan-5000/_site/index.html"}
 ::: {.project-content}
 ::: {.project-text}
-## Data Science & Analytics {.project-title}
-### Georgetown University • DSAN 5000 {.project-location}
+## Hidden Numbers: An Exploration of Factors that Influence Human Trafficking Detection and Government Response in Europe {.project-title}
+### Georgetown University • DSAN 5000 (Data Science & Analytics) {.project-location}
 
-A comprehensive exploration of data science fundamentals, statistical analysis, 
-and predictive modeling techniques. This project demonstrates proficiency in 
-Python, R, and various machine learning algorithms applied to real-world datasets.
-{.project-description}
+<p style="font-size: 1rem; font-weight: normal; line-height: 1.5;">In this project, I conducted extensive background research and assembled a comprehensive dataset on human trafficking by collecting, cleaning, and standardizing indicators from multiple reliable sources. The goal was to better understand which variables explain government responses to this rapidly growing and complex form of underground crime. I performed advanced exploratory data analysis and applied a range of supervised (regression and classification) and unsupervised machine learning techniques to model and evaluate these factors. This work contributes a novel data-driven framework for studying human trafficking and assessing related policy efforts.</p>
 :::
 
 ::: {.project-image}
@@ -30,13 +27,10 @@ Python, R, and various machine learning algorithms applied to real-world dataset
 ::: {.project-section .reverse data-href="projects/dsan-5100/_site/index.html"}
 ::: {.project-content}
 ::: {.project-text}
-## Probabilistic Modeling & Statistical Computing {.project-title}
-### Georgetown University • DSAN 5100 {.project-location}
+## Data vs. Dogma: Maternal Wellness Conditions and Abortion Policy per State{.project-title}
+### Georgetown University • DSAN 5100 (Probabilistic Modeling & Statistical Computing) {.project-location}
 
-Advanced statistical computing techniques including Bayesian inference, 
-MCMC methods, and probabilistic programming. Implemented complex models 
-using Stan and PyMC3 for real-world statistical problems.
-{.project-description}
+<p style="font-size: 1rem; font-weight: normal; line-height: 1.5;">This project explores how state-level maternal, infant, and overall health outcomes *prior* to the Dobbs decision relate to the abortion policies states implemented the ruling. My group and I conducted extensive background research and built a unified dataset by gathering, cleaning, and standardizing data from a wide range of reliable sources. Using R, we performed advanced exploratory analysis, statistical testing, and visualizations to examine these relationships. The goal was to provide data-driven insights that can inform more transparent and evidence-based reproductive health policymaking.</p>
 :::
 
 ::: {.project-image}
@@ -54,7 +48,6 @@ using Stan and PyMC3 for real-world statistical problems.
 An in-depth analysis of global health disparities and intervention strategies. 
 Combined epidemiological research with data visualization to present findings 
 on health outcomes across different populations.
-{.project-description}
 :::
 
 ::: {.project-image}
@@ -72,7 +65,6 @@ on health outcomes across different populations.
 Interactive dashboards and compelling visual narratives using D3.js, 
 Plotly, and advanced ggplot2 techniques. Created responsive visualizations 
 that transform complex data into accessible insights.
-{.project-description}
 :::
 
 ::: {.project-image}

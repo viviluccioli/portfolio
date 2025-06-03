@@ -9,8 +9,8 @@
   --shadow-purple: rgba(139, 92, 246, 0.3);
   
   /* New color variables for projects */
-  --light-red-gradient: linear-gradient(135deg, #fecaca 0%, #fca5a5 50%, #ef4444 100%);
-  --light-green-gradient: linear-gradient(135deg, #db3232 0%, #fcc443 50%, #22c55e 100%);
+  --light-red-gradient: linear-gradient(135deg, #f29e9e 0%, #ed6060 50%, #c10202 100%);
+  --light-green-gradient: linear-gradient(135deg, #db3232 0%, #fed982 50%, #22c55e 100%);
   --light-blue-gradient: linear-gradient(135deg, #fbf896 0%, #bdfbfb 50%, #3b82f6 100%);
   --light-yellow-gradient: linear-gradient(135deg, #0e0c0c 0%, #6e1f1f 50%, #b70606 100%);
 }
