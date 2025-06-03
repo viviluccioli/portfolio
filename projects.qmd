@@ -22,7 +22,7 @@ Python, R, and various machine learning algorithms applied to real-world dataset
 :::
 
 ::: {.project-image}
-!(images/5000.png)
+![](images/5000.png)
 :::
 :::
 :::
@@ -40,7 +40,7 @@ using Stan and PyMC3 for real-world statistical problems.
 :::
 
 ::: {.project-image}
-!(images/5100.png)
+![](images/5100.png)
 :::
 :::
 :::
@@ -58,7 +58,7 @@ on health outcomes across different populations.
 :::
 
 ::: {.project-image}
-!(images/5400.png)
+![](images/5400.png)
 :::
 :::
 :::
@@ -76,7 +76,7 @@ that transform complex data into accessible insights.
 :::
 
 ::: {.project-image}
-!(images/5200.png)
+![](images/5200.png)
 :::
 :::
 :::
@@ -103,4 +103,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-```
+``` 
