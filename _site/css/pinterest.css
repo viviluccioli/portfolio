@@ -11,6 +11,11 @@
   --caramel-latte: #936a2f;
   --open-pages: #95ada3;
   --tan: #bf9b69;
+  --light-grad-cord: #71bbe3;
+  --dark-grad-cord: #20255c;
+  --extra-light-blue: #ccdee8;
+  --light-kale: #c9cc8f;
+  --dark-kale: #383b03;
 
   /* neutrals + effects */
   --white: #ffffff;
@@ -202,15 +207,15 @@ a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
   margin-top: 1.25rem;
 }
 .about-card{
-  background: var(--tan);                 /* box bg */
-  color: var(--cowboy-boots);                     /* text color */
-  border: 2px solid var(--dessert-cup);          /* border color */
+  background: var(--extra-light-blue);                 /* box bg */
+  color: var(--dark-grad-cord);                     /* text color */
+  border: 2px solid var(--light-grad-cord);          /* border color */
   border-radius: 12px;
   padding: 1rem 1.25rem;
 }
-.about-card h3{ margin-top: 0; color: var(--cowboy-boots); }
-.about-card a{ color: var(--dessert-cup); }
-.about-card a:hover{ color: var(--dessert-cup); }
+.about-card h3{ margin-top: 0; color: var(--light-grad-cord); }
+.about-card a{ color: var(--dark-grad-cord); }
+.about-card a:hover{ color: var(--dark-grad-cord); }
 
 /* Mobile: stack the two boxes */
 @media (max-width: 720px){
@@ -235,8 +240,9 @@ a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
 
 /* Card styling for all five boxes */
 .skill-card{
-  background: var(--cowboy-boots);
-  color: var(--white);
+  background: var(--light-kale);
+  color: var(--dark-kale);
+  border: var(--kale-juice);
   border-radius: 12px;
   padding: 1rem 1.25rem;
   box-shadow: var(--shadow);
@@ -244,7 +250,7 @@ a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
   flex-direction: column;
   justify-content: flex-start;
 }
-.skill-card h3{ color: var(--white); margin-top: 0; }
+.skill-card h3{ color: var(--kale-juice); margin-top: 0; }
 .skill-card p{ margin: .25rem 0 0; }
 
 /* Responsive: collapse to two columns, then one */
@@ -267,4 +273,16 @@ a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
 .band-rose h2, .band-rose h3{ color: var(--cowboy-boots); }
 .band-rose a{ color: var(--cowboy-boots); }
 .band-rose a:hover{ color: #3b1515; }  /* darker hover */
+
+
+/* full width images */
+
+.fullwidth {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 
