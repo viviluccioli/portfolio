@@ -1,5 +1,8 @@
 ---
-title: "Resume"
+format:
+  html:
+    css: css/pinterest.css
+    theme: cosmo
 ---
 
 # Education

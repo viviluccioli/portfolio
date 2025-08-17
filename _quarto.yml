@@ -79,5 +79,5 @@ website:
 format:
   html:
     theme: cosmo
-    css: css/styles3.css
-    toc: true
+    css: css/pinterest.css
+

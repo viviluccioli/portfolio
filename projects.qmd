@@ -2,7 +2,7 @@
 title: "My Projects"
 format:
   html:
-    css: css/projects.css
+    css: css/projects2.css
     theme: none
 ---
 

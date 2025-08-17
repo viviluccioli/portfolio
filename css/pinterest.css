@@ -1,0 +1,270 @@
+/* ===== Viviana Portfolio Theme ===== */
+
+/* Color tokens (from your palette) */
+:root{
+  --dessert-cup: #d1b599;
+  --shop-window: #cbd0af;   /* foggy green */
+  --cowboy-boots: #481f1f;  /* deep brown */
+  --rose-petals: #d97066;
+  --grocery-bouquet: #cdc77f;
+  --kale-juice: #61642b;
+  --caramel-latte: #936a2f;
+  --open-pages: #95ada3;
+  --tan: #bf9b69;
+
+  /* neutrals + effects */
+  --white: #ffffff;
+  --shadow: 0 8px 24px rgba(0,0,0,.18);
+  --radius: 14px;
+}
+
+/* ---- Base ---- */
+html, body {
+  background: var(--dessert-cup);      /* rich, cozy background */
+  color: var(--cowboy-boots);                  /* all body text white (default) */
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Merriweather", Georgia, serif;
+  letter-spacing: .2px;
+  margin-top: 1.2em;
+  margin-bottom: .4em;
+  color: var(--caramel-latte);        /* warm yellow-green for headings */
+}
+
+/* Links */
+a{
+  color: var(--open-pages);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+a:hover{ color: var(--rose-petals); border-color: var(--rose-petals); }
+
+/* Figures & images */
+/* img { border-radius: var(--radius); box-shadow: var(--shadow); } */
+
+.headshot {
+  display: block;
+  margin: 1.25rem auto;
+  border-radius: 0; /* rectangular rings */
+  box-shadow:
+    0 0 0 10px var(--shop-window),      /* inner ring */
+    0 0 0 20px var(--grocery-bouquet), /* middle ring */
+    0 0 0 30px var(--kale-juice),      /* outer ring */
+    var(--shadow);                     /* drop shadow */
+}
+
+
+/* Callouts / cards (optional utility) */
+.card{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+/* Code blocks */
+pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+pre { background: rgba(255,255,255,.06); color: var(--white); border-radius: 12px; padding: 1rem; }
+
+/* Horizontal rule */
+hr { border: none; height: 2px; background: rgba(255,255,255,.15); border-radius: 2px; margin: 2rem 0; }
+
+/* ---- Special rule: when using the foggy-green bg, switch text to dark brown ---- */
+/* add class .bg-shop-window to any container; all text inside becomes dark-brown */
+.bg-shop-window{ background: var(--shop-window) !important; color: var(--cowboy-boots) !important; }
+.bg-shop-window a{ color: var(--cowboy-boots); border-color: transparent; }
+.bg-shop-window a:hover{ color: var(--rose-petals); }
+
+/* Utility background helpers (use anywhere) */
+.bg-dessert-cup{ background: var(--dessert-cup) !important; }
+.bg-cowboy-boots{ background: var(--cowboy-boots) !important; }
+.bg-rose-petals{ background: var(--rose-petals) !important; }
+.bg-grocery-bouquet{ background: var(--grocery-bouquet) !important; }
+.bg-kale-juice{ background: var(--kale-juice) !important; }
+.bg-caramel-latte{ background: var(--caramel-latte) !important; }
+.bg-open-pages{ background: var(--open-pages) !important; }
+
+/* When a light bg is used, ensure readable text */
+.bg-dessert-cup, .bg-grocery-bouquet, .bg-open-pages, .bg-shop-window{
+  color: var(--cowboy-boots) !important;
+}
+
+/* ---- Navbar (Quarto .navbar) ---- */
+.navbar{
+  background: rgba(72,31,31,.9);                /* translucent cowboy-boots */
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.navbar .navbar-brand, .navbar .navbar-nav .nav-link{
+  color: var(--white) !important;
+  font-weight: 600;
+  letter-spacing: .2px;
+  padding: .6rem .8rem;
+  border-radius: 10px;
+  position: relative;
+  transition: color .2s ease, background .2s ease, transform .15s ease;
+}
+/* active/current page */
+.navbar .nav-link.active, .navbar .nav-link[aria-current="page"]{
+  background: rgba(217,112,102,.22);            /* rose tint */
+}
+/* hover: subtle highlight sweep */
+.navbar .nav-link::after{
+  content:"";
+  position:absolute; left:10%; right:10%; bottom:6px; height:2px;
+  background: transparent;
+  transition: background .2s ease, left .2s ease, right .2s ease;
+}
+.navbar .nav-link:hover{
+  background: rgba(149,173,163,.18);            /* open-pages wash */
+  transform: translateY(-1px);
+}
+.navbar .nav-link:hover::after{
+  background: var(--grocery-bouquet);           /* warm highlight */
+  left: 6%; right: 6%;
+}
+
+/* Footer (if any) */
+.footer, .quarto-footer{
+  background: rgba(0,0,0,.2);
+  color: var(--white);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* Centered hero on index */
+h1[align="center"]{ font-size: clamp(2rem, 5vw, 3.2rem); }
+p[align="center"]{ font-size: 1.1rem; opacity: .95; }
+
+/* Shields.io badges row spacing */
+p img[alt="Python"], p img[alt="R"], p img[alt="HTML"]{ margin: .25rem .2rem; }
+
+/* Clickable social icons area */
+a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.35));
+}
+
+
+/* Make the band span the full viewport width, with comfy padding */
+.band{
+  margin: 0 calc(50% - 50vw);     /* full-bleed */
+  padding: 2.25rem 6vw;
+}
+
+/* Cowboy-boots section (deep brown bg, white text) */
+.band-cowboy{
+  background: var(--cowboy-boots);
+  color: var(--white);
+}
+.band-cowboy h2, .band-cowboy h3, .band-cowboy h4 { color: var(--white); }
+.band-cowboy a { color: var(--grocery-bouquet); }
+.band-cowboy a:hover { color: var(--rose-petals); }
+
+/* Tighten the gap so the band starts right under the image */
+.headshot{
+  display:block;
+  margin: 1rem auto 0;     /* bottom = 0 to “blend” into the band */
+}
+.band-cowboy{ margin-top: 0; }
+
+
+/* ====== HERO ====== */
+/* 1) Bigger, bolder, ombré title from #481f1f to #936a2f */
+.hero-title{
+  font-weight: 800;
+  font-size: clamp(2.6rem, 7vw, 4rem);
+  line-height: 1.05;
+  background: linear-gradient(90deg, #481f1f 0%, #936a2f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;                    /* reveal gradient in text */
+  margin-bottom: .25rem;
+}
+
+/* 2) Subtitle: bold + slightly bigger */
+.hero-subtitle{
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+}
+
+/* Keep the image snug above the About band */
+.headshot{ display:block; margin: 1rem auto 0; }
+
+/* ====== ABOUT GRID (inside band-cowboy) ====== */
+.about-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.about-card{
+  background: var(--tan);                 /* box bg */
+  color: var(--cowboy-boots);                     /* text color */
+  border: 2px solid var(--dessert-cup);          /* border color */
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+.about-card h3{ margin-top: 0; color: var(--cowboy-boots); }
+.about-card a{ color: var(--dessert-cup); }
+.about-card a:hover{ color: var(--dessert-cup); }
+
+/* Mobile: stack the two boxes */
+@media (max-width: 720px){
+  .about-grid{ grid-template-columns: 1fr; }
+}
+
+/* ====== SKILLS LAYOUT ====== */
+/* overall section keeps page background via .band (no color override) */
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-auto-rows: minmax(120px, auto);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Big left half (spans 2 cols x 2 rows) */
+.skill-wide{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* Card styling for all five boxes */
+.skill-card{
+  background: var(--cowboy-boots);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.skill-card h3{ color: var(--white); margin-top: 0; }
+.skill-card p{ margin: .25rem 0 0; }
+
+/* Responsive: collapse to two columns, then one */
+@media (max-width: 1000px){
+  .skills-grid{ grid-template-columns: repeat(2, 1fr); }
+  .skill-wide{ grid-column: 1 / -1; grid-row: auto; }
+}
+@media (max-width: 640px){
+  .skills-grid{ grid-template-columns: 1fr; }
+}
+
+/* ====== SECTION BANDS ====== */
+/* Full-bleed container already defined in your CSS: .band {...} */
+
+/* 5) "Let’s Connect" section colors */
+.band-rose{
+  background: var(--rose-petals);
+  color: var(--cowboy-boots);
+}
+.band-rose h2, .band-rose h3{ color: var(--cowboy-boots); }
+.band-rose a{ color: var(--cowboy-boots); }
+.band-rose a:hover{ color: #3b1515; }  /* darker hover */
+

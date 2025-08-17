@@ -18,20 +18,20 @@
     "href": "index.html#about-me",
     "title": "\nHey! I’m Viviana\n",
     "section": "About Me",
-    "text": "About Me\nI’m a M.S. student in Georgetown University’s Data Science and Analytics program, enthusiastic about leveraging data science for social impact. With a vast range of academic, professional and cultural experiences, I bring a unique perspective and analytical toolset to teams attempting to address complex and multifaceted problems.\n\n⭐ Interests\n\n💬 Computational linguistics and NLP for translation\n📖 Machine learning\n🗺️ GIS\n📊 Interactive data visualization\n🧠 Social epidemiology and global health equity\n🌎 Human trafficking research and surveillance\n\n\n\n🌎 Other\n\nI speak English, Italian, and Spanish! (and a bit of French)\nI’m both a U.S. and E.U. citizen\nFormer piano and voice instructor to young children\nOriginally from Falls Church, VA"
+    "text": "About Me\nI’m a M.S. student in Georgetown University’s Data Science and Analytics program, enthusiastic about leveraging data science for social impact. With a vast range of academic, professional and cultural experiences, I bring a unique perspective and analytical toolset to teams attempting to address complex and multifaceted problems.\n\n\n⭐ Interests\n\n💬 Computational linguistics and NLP for translation\n📖 Machine learning\n🗺️ GIS\n📊 Interactive data visualization\n🧠 Social epidemiology and global health equity\n🌎 Human trafficking research and surveillance\n\n\n\n🌎 Other\n\nI speak English, Italian, and Spanish! (and a bit of French)\nI’m both a U.S. and E.U. citizen\nFormer piano and voice instructor to young children\nOriginally from Falls Church, VA"
   },
   {
-    "objectID": "index.html#tech-stack-skills",
-    "href": "index.html#tech-stack-skills",
+    "objectID": "index.html#tech-stack",
+    "href": "index.html#tech-stack",
     "title": "\nHey! I’m Viviana\n",
-    "section": "💡 Tech Stack & Skills",
-    "text": "💡 Tech Stack & Skills\n\nLanguages & Core Tools\n     \n\n\nLibraries & Frameworks\n\nPython Ecosystem\n   \n\n\nR Ecosystem\n \n\n\n\nDevelopment Tools\n  \n\n\nStatistical Methods & Data Skills\n\n📊 Machine Learning: Optimization and gradient descent, supervised learning (regression and classification), unsupervised learning (dimensionality reduction, clustering, anomaly detection), reinforcement learning\n📈 Statistical analysis: Bayesian statistics, multivariate regression, time series analysis, survival analysis, business analytics\n🔍 Data processing: Database design, text mining, data management & engineering, data visualization, tidy data"
+    "section": "Tech Stack",
+    "text": "Tech Stack\n\n\n\nExpertise\n\n\n\n📊 Machine Learning: optimization & gradient descent; supervised (regression/classification); unsupervised (DR, clustering, anomaly); RL\n\n\n📈 Statistical analysis: Bayesian, multivariate regression, time series, survival, business analytics\n\n\n🔍 Data processing: database design, text mining, data engineering, visualization, tidy data\n\n\n\n\n\nR\n\n&lt;p&gt;[ggplot2] [tidyverse]&lt;/p&gt;\n\n\n\nPython\n\n&lt;p&gt;[PyTorch] [Pandas] [NumPy] [scikit-learn]&lt;/p&gt;\n\n\n\nDevelopment / Visualization\n\n&lt;p&gt;[VSCode] [GitHub] [Tableau]&lt;/p&gt;\n\n\n\nCoding Languages\n\n&lt;p&gt;[Python] [R] [HTML] [MySQL] [SAS] [SPSS]&lt;/p&gt;"
   },
   {
     "objectID": "index.html#lets-connect",
     "href": "index.html#lets-connect",
     "title": "\nHey! I’m Viviana\n",
     "section": "💌 Let’s Connect",
-    "text": "💌 Let’s Connect\n\nI love meeting new people and learning from them! I would be happy to hear from you if you have any questions about my experience, are looking to collaborate on a project, or just want to chat.\n(And I am also always open to book recommendations 😊 )"
+    "text": "💌 Let’s Connect\n\nI love meeting new people and learning from them! I would be happy to hear from you if you have any questions about my experience, are looking to collaborate on a project, or just want to chat. (And I am also always open to book recommendations 😊 )"
   }
 ]
