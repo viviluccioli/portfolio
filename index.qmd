@@ -35,18 +35,22 @@ format:
 </div>
 ```
 
+```{=html}
 <div class="content-wrapper">
 
-::: {.full-bleed-grid layout="[[1,1], [1,1]]"}
-![](images/gmuconf.jpeg)
-
-![](images/gtown.JPG)
-
-![](images/5300final.JPG)
-
-![](images/rconf.jpeg)
-:::
-
+<div class="bio-section">
+  <div class="bio-image">
+    <img src="images/headshot2.png" alt="Viviana Luccioli">
+  </div>
+  <div class="bio-text">
+    <p>Hi, I'm Viviana!</p>
+    <p>Welcome to my personal portfolio. Here, I share my projects, resume experience, skills, and other information.</p>
+    <p>I am currently in my second year as an M.S. student in Georgetown University's Data Science and Analytics program, graduating in May 2026. I am concurrently interning part time at the Federal Reserve Board in Washington, DC, where I split my time between contributing to the IT Statistics & Data Management division and the AI program, through which I work with senior economists and researchers in Financial Stability and International Finance.</p>
+    <p>I love to be involved in my community at Georgetown. I also currently serve as a Professional Development Center assistant, through which I help other data science students tailor their resumes and cover letters for best impact in the technical field, and I write blogs for our program website. Last year, I was also a research assistant in Dr. Qiwei (Britt) He's AI Measurement and Development (AIMD) Lab and a teaching assistant for DSAN 6150: Biological and Biomedical Data Science.</p>
+    <p>I hold two Bachelors degrees from the University of Virginia in Applied Statistics (with a concentration in Biostatistics) and Global Public Health.</p>
+  </div>
+</div>
+```
 ::: {.about-grid}
 ::: {.about-card}
 ### ⭐ Interests
@@ -97,6 +101,18 @@ format:
   </section>
 
 </div>
+
+
+::: {.full-bleed-grid layout="[[1,1], [1,1]]"}
+![](images/gmuconf.jpeg)
+
+![](images/gtown.JPG)
+
+![](images/5300final.JPG)
+
+![](images/rconf.jpeg)
+:::
+
 
 ::: {.band-rose}
 ## Let's Connect 💌 

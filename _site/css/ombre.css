@@ -154,9 +154,49 @@ a:hover{ color: var(--flower-purple); border-color: var(--flower-purple); }
 
 /* Main content container */
 .content-wrapper {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 2rem 2vw;  /* smaller left-right padding */
+}
+
+
+/* ====== BIOGRAPHY SECTION ====== */
+.bio-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;  /* lets image scale with screen size */
+  gap: 3rem;
+  max-width: 1600px; /* slightly larger */
+  margin: 3rem auto;
+}
+
+.bio-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.bio-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.bio-text p {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .bio-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .bio-image img {
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 /* ====== PHOTO GRID ====== */
