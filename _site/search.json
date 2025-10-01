@@ -9,29 +9,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "\nHey! I’m Viviana\n",
+    "title": "Viviana Luccioli",
     "section": "",
-    "text": "Hey! I’m Viviana\nData Scientist | Statistician | Global Health Researcher"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "\nHey! I’m Viviana\n",
-    "section": "About Me",
-    "text": "About Me\nI’m a M.S. student in Georgetown University’s Data Science and Analytics program, enthusiastic about leveraging data science for social impact. With a vast range of academic, professional and cultural experiences, I bring a unique perspective and analytical toolset to teams attempting to address complex and multifaceted problems.\n\n\n⭐ Interests\n\nComputational linguistics and NLP for translation\nMachine learning\nGIS\nInteractive data visualization\nSocial epidemiology and global health equity\nHuman trafficking research and surveillance\n\n\n\n🌎 Other\n\nI speak English, Italian, and Spanish! (and a bit of French)\nI’m both a U.S. and E.U. citizen\nFormer piano and voice instructor to young children\nOriginally from Falls Church, VA"
+    "text": "Viviana Luccioli\n    \n    \n      I'm an M.S. Data Science student at Georgetown University, and I'm glad you've found me! Please check out my projects and reach out with any questions."
   },
   {
     "objectID": "index.html#tech-stack",
     "href": "index.html#tech-stack",
-    "title": "\nHey! I’m Viviana\n",
+    "title": "Viviana Luccioli",
     "section": "Tech Stack",
-    "text": "Tech Stack\n\n\n\nExpertise\n\n\n\n📊 Machine Learning: optimization & gradient descent; supervised (regression/classification); unsupervised (DR, clustering, anomaly); RL\n\n\n📈 Statistical analysis: Bayesian, multivariate regression, time series, survival, business analytics\n\n\n🔍 Data processing: database design, text mining, data engineering, visualization, tidy data\n\n\n\n\n\nR\n\n&lt;p&gt;[ggplot2] [tidyverse]&lt;/p&gt;\n\n\n\nPython\n\n&lt;p&gt;[PyTorch] [Pandas] [NumPy] [scikit-learn]&lt;/p&gt;\n\n\n\nDevelopment / Visualization\n\n&lt;p&gt;[VSCode] [GitHub] [Tableau]&lt;/p&gt;\n\n\n\nCoding Languages\n\n&lt;p&gt;[Python] [R] [HTML] [MySQL] [SAS] [SPSS]&lt;/p&gt;"
+    "text": "Tech Stack\n\n\n\nExpertise\n\n\n\nMachine Learning: optimization & gradient descent; supervised (regression/classification); unsupervised (DR, clustering, anomaly); RL\n\n\nStatistical analysis: Bayesian, multivariate regression, time series, survival, business analytics\n\n\nData processing: database design, text mining, data engineering, visualization, tidy data\n\n\n\n\n\nR\n\n&lt;p&gt;[ggplot2] [tidyverse]&lt;/p&gt;\n\n\n\nPython\n\n&lt;p&gt;[PyTorch] [Pandas] [NumPy] [scikit-learn]&lt;/p&gt;\n\n\n\nDevelopment / Visualization\n\n&lt;p&gt;[VSCode] [GitHub] [Tableau]&lt;/p&gt;\n\n\n\nCoding Languages\n\n&lt;p&gt;[Python] [R] [HTML] [MySQL] [SAS] [SPSS]&lt;/p&gt;"
   },
   {
     "objectID": "index.html#lets-connect",
     "href": "index.html#lets-connect",
-    "title": "\nHey! I’m Viviana\n",
+    "title": "Viviana Luccioli",
     "section": "Let’s Connect 💌",
     "text": "Let’s Connect 💌\nI love meeting new people and learning from them! I would be happy to hear from you if you have any questions about my experience, are looking to collaborate on a project, or just want to chat.\n(And I am also always open to book recommendations 😊 )"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "My Projects",
+    "section": "",
+    "text": "PORTFOLIO\nPlease explore the projects I’ve worked on and reach out with any questions!\n\n\n\nShow all Georgetown UVA Data Visualization Public Health\n\n\n\n\n\n\n\nHidden Numbers: Human Trafficking in Europe\nGeorgetown University • DSAN 5000\nComprehensive analysis using machine learning to understand factors influencing human trafficking detection and government response across Europe.\n\n\n\n\n\n\n\nData vs. Dogma: Maternal Wellness & Abortion Policy\nGeorgetown University • DSAN 5100\nStatistical analysis exploring relationships between state-level maternal health outcomes and abortion policies post-Dobbs decision.\n\n\n\n\n\n\n\nGlobal Public Health Capstone Thesis\nUniversity of Virginia • Public Health\nIn-depth epidemiological research examining global health disparities and intervention strategies across diverse populations.\n\n\n\n\n\n\n\nAdvanced Data Visualization\nGeorgetown University • DSAN 5200\nInteractive dashboards and visual narratives using D3.js, Plotly, and ggplot2 to transform complex data into accessible insights."
   }
 ]

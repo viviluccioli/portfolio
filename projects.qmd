@@ -2,74 +2,70 @@
 title: "My Projects"
 format:
   html:
-    css: css/projects2.css
-    theme: none
+    css: css/portfolio-grid.css
+    theme: cosmo
 ---
 
-
-::: {#projects-container}
-
-::: {.project-section data-href="projects/dsan-5000/_site/index.html"}
-::: {.project-content}
-::: {.project-text}
-## Hidden Numbers: An Exploration of Factors that Influence Human Trafficking Detection and Government Response in Europe {.project-title}
-### Georgetown University • DSAN 5000 (Data Science & Analytics) {.project-location}
-
-<p style="font-size: 1rem; font-weight: normal; line-height: 1.5;">In this project, I conducted extensive background research and assembled a comprehensive dataset on human trafficking by collecting, cleaning, and standardizing indicators from multiple reliable sources. The goal was to better understand which variables explain government responses to this rapidly growing and complex form of underground crime. I performed advanced exploratory data analysis and applied a range of supervised (regression and classification) and unsupervised machine learning techniques to model and evaluate these factors. This work contributes a novel data-driven framework for studying human trafficking and assessing related policy efforts.</p>
+::: {#portfolio-header}
+# PORTFOLIO {.portfolio-title}
+*Please explore the projects I've worked on and reach out with any questions!*
 :::
 
-::: {.project-image}
+::: {#filter-buttons}
+[Show all]{.filter-btn .active data-filter="all"}
+[Georgetown]{.filter-btn data-filter="georgetown"}
+[UVA]{.filter-btn data-filter="uva"}
+[Data Visualization]{.filter-btn data-filter="dataviz"}
+[Public Health]{.filter-btn data-filter="public-health"}
+:::
+
+::: {#projects-grid}
+
+::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5000/_site/index.html"}
+::: {.card-image}
 ![](images/5000.png)
 :::
+::: {.card-content}
+### Hidden Numbers: Human Trafficking in Europe
+**Georgetown University • DSAN 5000**
+
+Comprehensive analysis using machine learning to understand factors influencing human trafficking detection and government response across Europe.
 :::
 :::
 
-::: {.project-section .reverse data-href="projects/dsan-5100/_site/index.html"}
-::: {.project-content}
-::: {.project-text}
-## Data vs. Dogma: Maternal Wellness Conditions and Abortion Policy per State{.project-title}
-### Georgetown University • DSAN 5100 (Probabilistic Modeling & Statistical Computing) {.project-location}
-
-<p style="font-size: 1rem; font-weight: normal; line-height: 1.5;">This project explores how state-level maternal, infant, and overall health outcomes *prior* to the Dobbs decision relate to the abortion policies states implemented the ruling. My group and I conducted extensive background research and built a unified dataset by gathering, cleaning, and standardizing data from a wide range of reliable sources. Using R, we performed advanced exploratory analysis, statistical testing, and visualizations to examine these relationships. The goal was to provide data-driven insights that can inform more transparent and evidence-based reproductive health policymaking.</p>
-:::
-
-::: {.project-image}
+::: {.project-card data-category="georgetown public-health dataviz" data-href="projects/dsan-5100/_site/index.html"}
+::: {.card-image}
 ![](images/5100.png)
 :::
+::: {.card-content}
+### Data vs. Dogma: Maternal Wellness & Abortion Policy
+**Georgetown University • DSAN 5100**
+
+Statistical analysis exploring relationships between state-level maternal health outcomes and abortion policies post-Dobbs decision.
 :::
 :::
 
-::: {.project-section data-href="projects/GPH-capstone/GPH_capstone.html"}
-::: {.project-content}
-::: {.project-text}
-## Global Public Health Capstone Thesis {.project-title}
-### University of Virginia • Public Health {.project-location}
-
-An in-depth analysis of global health disparities and intervention strategies. 
-Combined epidemiological research with data visualization to present findings 
-on health outcomes across different populations.
-:::
-
-::: {.project-image}
+::: {.project-card data-category="uva public-health" data-href="projects/GPH-capstone/GPH_capstone.html"}
+::: {.card-image}
 ![](images/5400.png)
 :::
+::: {.card-content}
+### Global Public Health Capstone Thesis
+**University of Virginia • Public Health**
+
+In-depth epidemiological research examining global health disparities and intervention strategies across diverse populations.
 :::
 :::
 
-::: {.project-section .reverse data-href="projects/dsan-5200/docs/index.html"}
-::: {.project-content}
-::: {.project-text}
-## Advanced Data Visualization {.project-title}
-### Georgetown University • DSAN 5200 {.project-location}
-
-Interactive dashboards and compelling visual narratives using D3.js, 
-Plotly, and advanced ggplot2 techniques. Created responsive visualizations 
-that transform complex data into accessible insights.
-:::
-
-::: {.project-image}
+::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5200/docs/index.html"}
+::: {.card-image}
 ![](images/5200.png)
 :::
+::: {.card-content}
+### Advanced Data Visualization
+**Georgetown University • DSAN 5200**
+
+Interactive dashboards and visual narratives using D3.js, Plotly, and ggplot2 to transform complex data into accessible insights.
 :::
 :::
 
@@ -78,21 +74,43 @@ that transform complex data into accessible insights.
 ```{=html}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const projectSections = document.querySelectorAll('.project-section');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
   
-  projectSections.forEach(section => {
-    section.addEventListener('click', function() {
+  // Filter functionality
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filter = this.getAttribute('data-filter');
+      
+      projectCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'flex';
+          card.classList.add('fade-in');
+        } else {
+          const categories = card.getAttribute('data-category');
+          if (categories.includes(filter)) {
+            card.style.display = 'flex';
+            card.classList.add('fade-in');
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('fade-in');
+          }
+        }
+      });
+    });
+  });
+  
+  // Click to navigate
+  projectCards.forEach(card => {
+    card.addEventListener('click', function() {
       const href = this.getAttribute('data-href');
-      
-      // Add highlight animation
-      this.classList.add('clicked');
-      
-      // Navigate after animation completes
-      setTimeout(() => {
-        window.location.href = href;
-      }, 600);
+      window.location.href = href;
     });
   });
 });
 </script>
-``` 
+```

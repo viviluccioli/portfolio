@@ -199,6 +199,8 @@ a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
 /* Keep the image snug above the About band */
 .headshot{ display:block; margin: 1rem auto 0; }
 
+
+
 /* ====== ABOUT GRID (inside band-cowboy) ====== */
 .about-grid{
   display: grid;
@@ -286,3 +288,112 @@ a img[alt="viviana-luccioli"], a img[alt="Gmail"]{
 }
 
 
+
+
+
+#projects-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 22px;
+}
+
+/* Project cards */
+.project-section{
+  cursor: pointer;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  color: var(--white);
+  display: grid;
+}
+.project-section:hover{ transform: translateY(-4px); filter: brightness(1.03); }
+.project-section.clicked{ animation: pop .45s ease; }
+@keyframes pop{ 0%{transform:scale(.98)} 60%{transform:scale(1.02)} 100%{transform:scale(1)} }
+
+.project-content{
+  display: grid;
+  grid-template-columns: 1.2fr .9fr;
+  gap: 16px;
+  padding: 22px;
+}
+.project-section.reverse .project-content{ grid-template-columns: .9fr 1.2fr; }
+
+.project-text{ align-self: center; }
+.project-title{ margin: 0 0 .2rem 0; color: var(--white); }
+.project-location{ margin-top: .1rem; opacity: .95; color: var(--white); }
+
+.project-image img{
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+/* Alternate project colors automatically (you can also override with bg- classes) */
+.project-section:nth-child(1){ background: var(--rose-petals); }
+.project-section:nth-child(2){ background: var(--open-pages); color: var(--cowboy-boots); }
+.project-section:nth-child(3){ background: var(--caramel-latte); }
+.project-section:nth-child(4){ background: var(--kale-juice); }
+
+/* Ensure readability on lighter cards */
+.project-section:nth-child(2),
+.bg-shop-window, .bg-open-pages, .bg-dessert-cup, .bg-grocery-bouquet{
+  color: var(--cowboy-boots);
+}
+.project-section:nth-child(2) .project-title{ color: var(--cowboy-boots); }
+
+/* Optional explicit palette classes for manual assignment */
+.bg-dessert-cup{ background: var(--dessert-cup) !important; }
+.bg-shop-window{ background: var(--shop-window) !important; }
+.bg-cowboy-boots{ background: var(--cowboy-boots) !important; }
+.bg-rose-petals{ background: var(--rose-petals) !important; }
+.bg-grocery-bouquet{ background: var(--grocery-bouquet) !important; }
+.bg-kale-juice{ background: var(--kale-juice) !important; }
+.bg-caramel-latte{ background: var(--caramel-latte) !important; }
+.bg-open-pages{ background: var(--open-pages) !important; }
+
+/* Text utilities if you need them */
+.text-white{ color: var(--white) !important; }
+.text-brown{ color: var(--cowboy-boots) !important; }
+
+
+/* ==== FULL-BLEED 2×2 GRID (force on, override everything) ==== */
+.photo-grid{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+
+  /* full-bleed */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+
+/* Quarto wraps images in <p> and sometimes <figure>; remove spacing and let them fill */
+.photo-grid > p,
+.photo-grid > figure { 
+  margin: 0 !important; 
+}
+
+.photo-grid img{
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Don’t collapse to one column unless truly small */
+@media (max-width: 540px){
+  .photo-grid{ grid-template-columns: 1fr; }
+}
+
+
+.full-bleed-grid {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

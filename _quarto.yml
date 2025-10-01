@@ -79,5 +79,5 @@ website:
 format:
   html:
     theme: cosmo
-    css: css/pinterest.css
+    css: css/ombre.css
 
