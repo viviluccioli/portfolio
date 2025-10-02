@@ -11,14 +11,7 @@
     "href": "index.html",
     "title": "Viviana Luccioli",
     "section": "",
-    "text": "Viviana Luccioli\n    \n    \n      I'm an M.S. Data Science student at Georgetown University, and I'm glad you've found me! Please check out my projects and reach out with any questions."
-  },
-  {
-    "objectID": "index.html#tech-stack",
-    "href": "index.html#tech-stack",
-    "title": "Viviana Luccioli",
-    "section": "Tech Stack",
-    "text": "Tech Stack\n\n\n\nExpertise\n\n\n\nMachine Learning: optimization & gradient descent; supervised (regression/classification); unsupervised (DR, clustering, anomaly); RL\n\n\nStatistical analysis: Bayesian, multivariate regression, time series, survival, business analytics\n\n\nData processing: database design, text mining, data engineering, visualization, tidy data\n\n\n\n\n\nR\n\n&lt;p&gt;[ggplot2] [tidyverse]&lt;/p&gt;\n\n\n\nPython\n\n&lt;p&gt;[PyTorch] [Pandas] [NumPy] [scikit-learn]&lt;/p&gt;\n\n\n\nDevelopment / Visualization\n\n&lt;p&gt;[VSCode] [GitHub] [Tableau]&lt;/p&gt;\n\n\n\nCoding Languages\n\n&lt;p&gt;[Python] [R] [HTML] [MySQL] [SAS] [SPSS]&lt;/p&gt;"
+    "text": "Viviana Luccioli\n    \n\n  I'm an M.S. Data Science student at Georgetown University, and I'm glad you've found me! Here, you can learn more about me, see my resume, and explore some of my projects."
   },
   {
     "objectID": "index.html#lets-connect",
@@ -32,6 +25,6 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "PORTFOLIO\nPlease explore the projects I’ve worked on and reach out with any questions!\n\n\n\nShow all Georgetown UVA Data Visualization Public Health\n\n\n\n\n\n\n\nHidden Numbers: Human Trafficking in Europe\nGeorgetown University • DSAN 5000\nComprehensive analysis using machine learning to understand factors influencing human trafficking detection and government response across Europe.\n\n\n\n\n\n\n\nData vs. Dogma: Maternal Wellness & Abortion Policy\nGeorgetown University • DSAN 5100\nStatistical analysis exploring relationships between state-level maternal health outcomes and abortion policies post-Dobbs decision.\n\n\n\n\n\n\n\nGlobal Public Health Capstone Thesis\nUniversity of Virginia • Public Health\nIn-depth epidemiological research examining global health disparities and intervention strategies across diverse populations.\n\n\n\n\n\n\n\nAdvanced Data Visualization\nGeorgetown University • DSAN 5200\nInteractive dashboards and visual narratives using D3.js, Plotly, and ggplot2 to transform complex data into accessible insights."
+    "text": "PORTFOLIO\n\nShow all Georgetown UVA Data Visualization Public Health\n\n\n\n\n\n\n\nHidden Numbers: Human Trafficking in Europe\nGeorgetown University • DSAN 5000\nComprehensive analysis using machine learning to understand factors influencing human trafficking detection and government response across Europe.\n\n\n\n\n\n\n\nData vs. Dogma: Maternal Wellness & Abortion Policy\nGeorgetown University • DSAN 5100\nStatistical analysis exploring relationships between state-level maternal health outcomes and abortion policies post-Dobbs decision.\n\n\n\n\n\n\n\nUS Media Coverage NLP Analysis\nGeorgetown University • DSAN 5400\nThe analysis uses advanced data visualization, topic modeling and sentiment analysis to identify patterns in coverage between right-leaning, neutral, and left-leaning news organizations.\n\n\n\n\n\n\n\nCapstone Thesis\nUniversity of Virginia • Global Public Health Capstone Thesis\nIn-depth epidemiological research examining global health disparities and intervention strategies across diverse populations.\n\n\n\n\n\n\n\nAdvanced Data Visualization\nGeorgetown University • DSAN 5200\nInteractive dashboards and visual narratives using D3.js, Plotly, and ggplot2 to transform complex data into accessible insights."
   }
 ]

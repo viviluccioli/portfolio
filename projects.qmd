@@ -6,10 +6,7 @@ format:
     theme: cosmo
 ---
 
-::: {#portfolio-header}
-# PORTFOLIO {.portfolio-title}
-*Please explore the projects I've worked on and reach out with any questions!*
-:::
+# PORTFOLIO
 
 ::: {#filter-buttons}
 [Show all]{.filter-btn .active data-filter="all"}
@@ -45,13 +42,25 @@ Statistical analysis exploring relationships between state-level maternal health
 :::
 :::
 
-::: {.project-card data-category="uva public-health" data-href="projects/GPH-capstone/GPH_capstone.html"}
+::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5400/index.html"}
 ::: {.card-image}
 ![](images/5400.png)
 :::
 ::: {.card-content}
-### Global Public Health Capstone Thesis
-**University of Virginia • Public Health**
+### US Media Coverage NLP Analysis
+**Georgetown University • DSAN 5400**
+
+The analysis uses advanced data visualization, topic modeling and sentiment analysis to identify patterns in coverage between right-leaning, neutral, and left-leaning news organizations.
+:::
+:::
+
+::: {.project-card data-category="uva public-health" data-href="projects/GPH-capstone/GPH_capstone.html"}
+::: {.card-image}
+![](images/gph.png)
+:::
+::: {.card-content}
+### Capstone Thesis
+**University of Virginia • Global Public Health Capstone Thesis**
 
 In-depth epidemiological research examining global health disparities and intervention strategies across diverse populations.
 :::
@@ -70,7 +79,6 @@ Interactive dashboards and visual narratives using D3.js, Plotly, and ggplot2 to
 :::
 
 :::
-
 ```{=html}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -113,4 +121,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-```
