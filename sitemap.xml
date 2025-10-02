@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://viviluccioli.github.io/portfolio/resume.html</loc>
+    <lastmod>2025-10-01T15:17:02.488Z</lastmod>
+  </url>
+  <url>
     <loc>https://viviluccioli.github.io/portfolio/index.html</loc>
-    <lastmod>2025-02-17T02:26:12.432Z</lastmod>
+    <lastmod>2025-10-02T00:49:53.967Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viviluccioli.github.io/portfolio/projects.html</loc>
+    <lastmod>2025-10-01T14:14:19.017Z</lastmod>
   </url>
 </urlset>
