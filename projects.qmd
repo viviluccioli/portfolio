@@ -42,31 +42,6 @@ Statistical analysis exploring relationships between state-level maternal health
 :::
 :::
 
-::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5400/docs/index.html"}
-::: {.card-image}
-![](images/5400.png)
-:::
-::: {.card-content}
-### US Media Coverage NLP Analysis
-**Georgetown University • DSAN 5400**
-
-The analysis uses advanced data visualization, topic modeling and sentiment analysis to identify patterns in coverage between right-leaning, neutral, and left-leaning news organizations.
-:::
-:::
-
-
-::: {.project-card data-category="uva public-health" data-href="projects/GPH_capstone/GPH Capstone Literature Review.pdf"}
-::: {.card-image}
-![](images/gph.png)
-:::
-::: {.card-content}
-### Red Light: A Review of Interventions for Detecting Victims of Human Trafficking in U.S. Healthcare Facilities
-**University of Virginia • Global Public Health Capstone Thesis**
-
-Systematic review that investigates what efforts are being made in healthcare facilities across the U.S. and how they have affected identification rates of victims to shed light on what gaps exist and how more facilities in the U.S. should adopt necessary measures.
-:::
-:::
-
 ::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5200/docs/index.html"}
 ::: {.card-image}
 ![](images/5200.png)
@@ -76,6 +51,43 @@ Systematic review that investigates what efforts are being made in healthcare fa
 **Georgetown University • DSAN 5200**
 
 Interactive visual narrative that seeks to dispel common myths regarding HIV/AIDS. Final Project for DSAN 5200: Advanced Data Visualization.
+:::
+:::
+
+::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5400/docs/index.html"}
+::: {.card-image}
+![](images/5400.png)
+:::
+::: {.card-content}
+### US Media Coverage NLP Analysis
+**Georgetown University • DSAN 5400**
+
+Advanced data visualization, topic modeling and sentiment analysis to identify patterns in coverage between right-leaning, neutral, and left-leaning news organizations.
+:::
+:::
+
+::: {.project-card data-category="georgetown" data-href="projects/scholarship-project/_site/index.html"}
+::: {.card-image}
+![](images/scholarship.png)
+:::
+::: {.card-content}
+### Uncovering the Unknown: Violence Against Humanitarian Aid Workers
+**Georgetown University • Scholarship Competition Project**
+
+Exploring how data on humanitarian aid worker deaths and injury can provide insight into global violence trends.
+:::
+:::
+
+
+::: {.project-card data-category="uva public-health" data-href="https://github.com/viviluccioli/GPH_Capstone"}
+::: {.card-image}
+![](images/capstone.png)
+:::
+::: {.card-content}
+### Review of Interventions for Detecting Human Trafficking Victims in U.S. Healthcare
+**University of Virginia • Global Public Health Capstone Thesis**
+
+Systematic review that investigates what efforts are being made in healthcare facilities across the U.S. and how they have affected identification rates, with policy recommendations.
 :::
 :::
 

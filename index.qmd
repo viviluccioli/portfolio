@@ -12,7 +12,7 @@ format:
       Viviana Luccioli
     </p>
 <p class="hero-subtitle" style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 1.5rem;">
-  I'm an M.S. Data Science student at Georgetown University, and I'm glad you've found me! Here, you can learn more about me, see my <a href="_site/resume.html" style="color: #your-color; text-decoration: underline;">resume</a>, and explore some of my <a href="_site/projects.html" style="color: #fd8660; text-decoration: underline;">projects</a>.
+  I'm an M.S. Data Science student at Georgetown University, and I'm glad you've found me! Here, you can learn more about me, see my <a href="resume.html" style="color: #your-color; text-decoration: underline;">resume</a>, and explore some of my <a href="projects.html" style="color: #fd8660; text-decoration: underline;">projects</a>.
 </p>
     <div class="hero-icons">
       <a href="https://www.linkedin.com/in/viviana-luccioli" target="_blank" aria-label="LinkedIn">

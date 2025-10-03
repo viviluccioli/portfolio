@@ -109,7 +109,7 @@ h1.title,
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(147, 25, 159, 0.45) !important;
+  box-shadow: 0 8px 20px rgba(95, 25, 101, 0.45) !important;
 }
 
 .card-image {
@@ -175,8 +175,8 @@ h1.title,
 .card-content {
   background: linear-gradient(
     to top,
-    rgba(147, 25, 159, 0.9) 0%,
-    rgba(147, 25, 159, 0.7) 70%,
+    rgba(95, 25, 101, 0.45) 0%,
+    rgba(95, 25, 101, 0.25)70%,
     transparent 100%
   );
 }
