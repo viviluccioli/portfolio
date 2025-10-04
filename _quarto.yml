@@ -56,6 +56,8 @@ project:
     - projects/dsan-5100/_site
     - projects/dsan-5200/docs
     - projects/dsan-5400/docs
+    - projects/GPH_capstone
+    - projects/scholarship-project/_site
 
 website:
   title: "Viviana Luccioli"
