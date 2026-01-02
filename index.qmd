@@ -25,7 +25,7 @@ format:
       <img src="images/icons/database.png" alt="Database" class="float-symbol" data-delay="3">
       <img src="images/icons/pytorch.png" alt="PyTorch" class="float-symbol" data-delay="4">
       <img src="images/icons/nn1.png" alt="Neural Net" class="float-symbol" data-delay="5">
-      <img src="images/icons/code.png" alt="Code" class="float-symbol" data-delay="6">
+      <img src="images/icons/hadoop.png" alt="Hadoop" class="float-symbol" data-delay="6">
       <img src="images/icons/graph.png" alt="Graph" class="float-symbol" data-delay="7">
       <img src="images/icons/tensor.svg" alt="Tensor" class="float-symbol" data-delay="8">
       <img src="images/icons/data.png" alt="Data" class="float-symbol" data-delay="9">
@@ -180,15 +180,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   <div class="bio-text">
     <p class="greeting">Hi, I'm <span class="gradient-name">Viviana</span>! <span class="wave">👋</span></p>
-    <p>I am a second-year M.S. student in Georgetown University's Data Science and Analytics program, graduating in May 2026. Alongside my studies, I intern part-time at the Federal Reserve Board in Washington, D.C., where I build dashboards and automation processes in the IT Statistics & Data Management division while also collaborating through the AI program with senior economists and researchers in Financial Stability and International Finance to develop AI agents and research assistants (using novel tools such as LangChain and LangGraph) that enhance and support their critical research.</p>
+    <p>I am a second-year M.S. student in Georgetown University's Data Science and Analytics program, graduating in May 2026. Alongside my studies, I intern part-time at the Federal Reserve Board in Washington, D.C., where I build dashboards and automation processes in the IT Statistics & Data Management division while also collaborating through the AI program with senior economists and researchers in Financial Stability and International Finance to develop AI agents and research assistants that enhance and support their critical research.</p>
+
+    <p>I'm actively involved in my Georgetown community! I currently serve as a Professional Development Center assistant, where I help fellow data science students refine their resumes and cover letters for optimal impact in technical fields, and contribute blog posts to our program website. Last year, I was also aresearch assistant in Dr. Qiwei (Britt) He's AI Measurement and Development (AIMD) Lab and served as a teaching assistant for DSAN 6150: Biological and Biomedical Data Science.</p>
+
+    <p>I also hold two B.A. degrees from the University of Virginia in Statistics (concentration in Biostatistics) and Global Public Health.</p>
   </div>
 </div>
 
 ```
-
-I enjoy being actively involved in the Georgetown community. I currently serve as a Professional Development Center assistant, where I help fellow data science students refine their resumes and cover letters for maximum impact in technical fields. I also contribute blog posts to our program website. Furthermore, last year, I worked as a research assistant in Dr. Qiwei (Britt) He's AI Measurement and Development (AIMD) Lab and served as a teaching assistant for DSAN 6150: Biological and Biomedical Data Science.
-
-I also hold two Bachelors degrees from the University of Virginia in Applied Statistics (with a concentration in Biostatistics) and Global Public Health.
 
 
 ::: {.about-grid}
@@ -220,9 +220,11 @@ I also hold two Bachelors degrees from the University of Virginia in Applied Sta
 - Recipient of Georgetown University’s Merit Scholarship (2024, 2025)
 - Nominee, Georgetown 2025 Graduate Student Awards
 - First Place, DC Metro StatConnect Conference – Graduate Research Paper Competition
-- Pending Research Publications:
-  - Co-author on a paper with the Federal Reserve Board AI research team, submitted to the IEEE Big Data Conference 2025
-  - Collaborating with Program Director Dr. Purna Gamage on a publication originating from a class final project
+- Research:
+  - [*LLM on a Budget: Active Knowledge Distillation for Efficient Classification of Large Text Corpora*](https://www.arxiv.org/pdf/2511.11574)
+    - Published in IEEE Big Data 2025 and as a FEDS Notes paper 
+    - In affiliation with Federal Reserve Board of Governors
+  - Pending publication of research in collaboration with Georgetown Data Science & Analytics Program director Dr. Purna Gamage, stemming from a course group final [project](file:///Users/vivianaluccioli/Dropbox/personal/portfolio/_site/projects/dsan-5100/_site/index.html)
 
 
 ```{=html}
