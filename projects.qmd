@@ -12,86 +12,167 @@ format:
 [Show all]{.filter-btn .active data-filter="all"}
 [Georgetown]{.filter-btn data-filter="georgetown"}
 [UVA]{.filter-btn data-filter="uva"}
-[Data Visualization]{.filter-btn data-filter="dataviz"}
-[Public Health]{.filter-btn data-filter="public-health"}
+[Applications]{.filter-btn data-filter="apps"}
+[Publications]{.filter-btn data-filter="publications"}
 :::
 
 ::: {#projects-grid}
 
-::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5000/_site/index.html"}
-::: {.card-image}
-![](images/5000.png)
+::: {.project-card data-category="georgetown apps" data-href="https://vibecheck-app-1765337464.fly.dev/" data-github="https://github.com/kristinmlloyd/VibeCheck"}
+![](images/6700.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/kristinmlloyd/VibeCheck){.btn-github}
+[View Project](https://vibecheck-app-1765337464.fly.dev/){.btn-site}
 :::
+
+::: {.card-content}
+### VibeCheck
+
+**Georgetown University • DSAN 6700: Machine Learning App Deployment**
+
+An application that allows users to discover restaurants in Washington, DC by their vibe, rather than food type! Just enter a text description ("cozy", "romantic", etc) or a reference photo, and VibeCheck will return similar vibes by extracting multimodal embeddings from images & text (CLIP + SentenceBERT) and returning fast similarity search using vector indexing. 
+:::
+:::
+
+::: {.project-card data-category="georgetown apps" data-href="https://huggingface.co/spaces/med2106/hairNet" data-github="https://github.com/med2106/dsan6600_group04_project"}
+![](images/6600.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/med2106/dsan6600_group04_project){.btn-github}
+[View Project](https://huggingface.co/spaces/med2106/hairNet){.btn-site}
+:::
+
+::: {.card-content}
+### HairNet
+
+**Georgetown University • DSAN 6600: Neural Networks and Deep Learning**
+
+HairNet, a final project for DSAN 6600, introduces the first deep learning model for full Andre Walker 10-class hair typing, achieving 53.7% top-1 and 88.7% within-one-class accuracy using EfficientNetV2-M with ordinal regression on a custom ~14k-image dataset.
+:::
+:::
+
+::: {.project-card data-category="publications" data-href="https://www.arxiv.org/pdf/2511.11574" data-github="https://www.federalreserve.gov/econres/feds/files/2025108pap.pdf"}
+![](images/LLMonbudget.png){.card-image}
+
+::: {.card-buttons}
+[IEEE](https://www.arxiv.org/pdf/2511.11574){.btn-github}
+[FEDS Notes](https://www.federalreserve.gov/econres/feds/files/2025108pap.pdf){.btn-site}
+:::
+
+::: {.card-content}
+### LLM on a Budget: Active Knowledge Distillation for Efficient Classification of Large Text Corpora
+
+**Federal Reserve Board**
+
+This research proposes M-RARU, an active learning method that intelligently selects which data points a large language model should label when training smaller "student" models, rather than having the LLM label everything. This approach reduces the number of samples needed by up to 80% compared to random sampling, cutting costs and training time while maintaining classification accuracy. 
+:::
+:::
+
+::: {.project-card data-category="georgetown" data-href="projects/dsan-5000/_site/index.html" data-github="https://github.com/yourusername/dsan-5000"}
+![](images/5000.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/yourusername/dsan-5000){.btn-github}
+[View Project](projects/dsan-5000/_site/index.html){.btn-site}
+:::
+
 ::: {.card-content}
 ### Hidden Numbers: Human Trafficking in Europe
+
 **Georgetown University • DSAN 5000**
 
 Comprehensive analysis using machine learning to understand factors influencing human trafficking detection and government response across Europe.
 :::
 :::
 
-::: {.project-card data-category="georgetown public-health dataviz" data-href="projects/dsan-5100/_site/index.html"}
-::: {.card-image}
-![](images/5100.png)
+::: {.project-card data-category="georgetown" data-href="projects/dsan-5100/_site/index.html" data-github="https://github.com/yourusername/dsan-5100"}
+![](images/5100.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/yourusername/dsan-5100){.btn-github}
+[View Project](projects/dsan-5100/_site/index.html){.btn-site}
 :::
+
 ::: {.card-content}
 ### Data vs. Dogma: Maternal Wellness & Abortion Policy
+
 **Georgetown University • DSAN 5100**
 
 Statistical analysis exploring relationships between state-level maternal health outcomes and abortion policies post-Dobbs decision.
 :::
 :::
 
-::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5200/docs/index.html"}
-::: {.card-image}
-![](images/5200.png)
+::: {.project-card data-category="georgetown" data-href="projects/dsan-5200/docs/index.html" data-github="https://github.com/yourusername/dsan-5200"}
+![](images/5200.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/yourusername/dsan-5200){.btn-github}
+[View Project](projects/dsan-5200/docs/index.html){.btn-site}
 :::
+
 ::: {.card-content}
 ### Advanced Data Visualization
+
 **Georgetown University • DSAN 5200**
 
 Interactive visual narrative that seeks to dispel common myths regarding HIV/AIDS. Final Project for DSAN 5200: Advanced Data Visualization.
 :::
 :::
 
-::: {.project-card data-category="georgetown dataviz" data-href="projects/dsan-5400/docs/index.html"}
-::: {.card-image}
-![](images/5400.png)
+::: {.project-card data-category="georgetown" data-href="projects/dsan-5400/docs/index.html" data-github="https://github.com/yourusername/dsan-5400"}
+![](images/5400.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/yourusername/dsan-5400){.btn-github}
+[View Project](projects/dsan-5400/docs/index.html){.btn-site}
 :::
+
 ::: {.card-content}
 ### US Media Coverage NLP Analysis
+
 **Georgetown University • DSAN 5400**
 
 Advanced data visualization, topic modeling and sentiment analysis to identify patterns in coverage between right-leaning, neutral, and left-leaning news organizations.
 :::
 :::
 
-::: {.project-card data-category="georgetown" data-href="projects/scholarship-project/_site/index.html"}
-::: {.card-image}
-![](images/scholarship.png)
-:::
-::: {.card-content}
-### Uncovering the Unknown: Violence Against Humanitarian Aid Workers
-**Georgetown University • Scholarship Competition Project**
+::: {.project-card data-category="uva" data-href="https://github.com/viviluccioli/GPH_Capstone" data-github="https://github.com/viviluccioli/GPH_Capstone"}
+![](images/capstone.png){.card-image}
 
-Exploring how data on humanitarian aid worker deaths and injury can provide insight into global violence trends.
-:::
+::: {.card-buttons}
+[GitHub](https://github.com/viviluccioli/GPH_Capstone){.btn-github}
+[View Project](https://github.com/viviluccioli/GPH_Capstone/blob/main/GPH%20Capstone%20Literature%20Review.pdf){.btn-site}
 :::
 
-
-::: {.project-card data-category="uva public-health" data-href="https://github.com/viviluccioli/GPH_Capstone"}
-::: {.card-image}
-![](images/capstone.png)
-:::
 ::: {.card-content}
 ### Review of Interventions for Detecting Human Trafficking Victims in U.S. Healthcare
+
 **University of Virginia • Global Public Health Capstone Thesis**
 
 Systematic review that investigates what efforts are being made in healthcare facilities across the U.S. and how they have affected identification rates, with policy recommendations.
 :::
 :::
 
+::: {.project-card data-category="georgetown" data-href="projects/scholarship-project/_site/index.html" data-github="https://github.com/yourusername/scholarship-project"}
+![](images/scholarship.png){.card-image}
+
+::: {.card-buttons}
+[GitHub](https://github.com/yourusername/scholarship-project){.btn-github}
+[View Project](projects/scholarship-project/_site/index.html){.btn-site}
 :::
+
+::: {.card-content}
+### Uncovering the Unknown: Violence Against Humanitarian Aid Workers
+
+**Georgetown University • Scholarship Competition Project**
+
+Exploring how data on humanitarian aid worker deaths and injury can provide insight into global violence trends.
+:::
+:::
+
+:::
+
 ```{=html}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -125,12 +206,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Click to navigate
+  // Prevent card click when clicking buttons
+  document.querySelectorAll('.card-buttons a').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  });
+  
+  // Click on card (outside buttons) navigates to project
   projectCards.forEach(card => {
-    card.addEventListener('click', function() {
-      const href = this.getAttribute('data-href');
-      window.location.href = href;
+    card.addEventListener('click', function(e) {
+      // Only navigate if not clicking a button
+      if (!e.target.closest('.card-buttons')) {
+        const href = this.getAttribute('data-href');
+        window.location.href = href;
+      }
     });
   });
 });
 </script>
+```

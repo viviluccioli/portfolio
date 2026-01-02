@@ -14,39 +14,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-align: center;
-  font-size: 3.5rem;   /* adjust size as you like */
+  font-size: 3.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-family: 'Merriweather', serif !important;
-}
-
-
-/* Portfolio Header */
-#portfolio-header {
-  text-align: center;
-  margin: 3rem 0 2rem 0;
-}
-
-#portfolio-header h1,
-h1.title,
-.portfolio-title {
-  font-family: 'Merriweather', serif !important;
-}
-
-
-.portfolio-title {
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
-  font-family: 'Merriweather', serif !important;
-}
-
-.portfolio-subtitle {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  font-style: italic;
 }
 
 /* Filter Buttons */
@@ -86,25 +57,29 @@ h1.title,
 /* Projects Grid */
 #projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1200px;
   padding: 0 1rem;
+  align-items: start; /* Prevent cards from stretching to match heights */
 }
 
-/* Project Cards */
+/* =====================================================
+   PROJECT CARDS - Titles Below Images
+   ===================================================== */
+
 .project-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(147, 25, 159, 0.3) !important;
   cursor: pointer;
   transition: all 0.3s ease;
   animation: fadeIn 0.5s ease-in;
-  aspect-ratio: 1 / 1; /* Makes it square */
-  width: 100%;
+  position: relative;
 }
 
 .project-card:hover {
@@ -112,83 +87,149 @@ h1.title,
   box-shadow: 0 8px 20px rgba(95, 25, 101, 0.45) !important;
 }
 
-.card-image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Image Container - holds the image and overlay */
+.project-card > p:first-child {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
-.card-image img {
+/* The actual image */
+.card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-.project-card:hover .card-image img {
+/* =====================================================
+   HOVER BUTTONS - GitHub & View Project
+   ===================================================== */
+
+.card-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(147, 25, 159, 0.75);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+  /* Position over the image area */
+  aspect-ratio: 4 / 3;
+}
+
+.card-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+  font-family: 'Merriweather', serif !important;
+}
+
+.btn-github {
+  background: #333;
+  color: white !important;
+  border: 2px solid #333;
+}
+
+.btn-github:hover {
+  background: #555;
+  border-color: #555;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-site {
+  background: white;
+  color: #93199f !important;
+  border: 2px solid white;
+}
+
+.btn-site:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Show buttons on hover */
+.project-card:hover .card-buttons {
+  opacity: 1;
+}
+
+.project-card:hover .card-buttons a {
+  transform: translateY(0);
+}
+
+/* Blur the image on hover */
+.project-card:hover .card-image {
+  filter: blur(4px);
   transform: scale(1.05);
 }
 
-/* Card Content - Overlay */
+/* =====================================================
+   CARD CONTENT - Title & Subtitle Below Image
+   ===================================================== */
+
 .card-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
-  transition: all 0.3s ease;
-  z-index: 2;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: white;
+  position: relative;
+  z-index: 1;
 }
 
 .card-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
-  color: white;
-  line-height: 1.3;
+  color: #2c3e50;
+  line-height: 1.35;
 }
 
 .card-content strong {
   display: block;
   color: #5dade2;
   font-size: 0.85rem;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
 }
 
+/* Description - hidden by default, revealed on hover */
 .card-content p {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: white;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
   margin: 0;
-  opacity: 0;
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
 }
 
-/* Hover Effect - Show Full Description */
-.card-content {
-  background: linear-gradient(
-    to top,
-    rgba(95, 25, 101, 0.45) 0%,
-    rgba(95, 25, 101, 0.25)70%,
-    transparent 100%
-  );
-}
-
-
+/* Show description on hover - use a large max-height to allow full expansion */
 .project-card:hover .card-content p {
+  max-height: 500px; /* Large enough to fit any description */
   opacity: 1;
-  max-height: 200px;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
-/* Animations */
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -204,14 +245,13 @@ h1.title,
   animation: fadeIn 0.5s ease-in;
 }
 
-/* Responsive Design */
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
 @media (max-width: 768px) {
-  .portfolio-title {
-    font-size: 2rem;
-  }
-  
-  .portfolio-subtitle {
-    font-size: 1rem;
+  h1 {
+    font-size: 2.5rem;
   }
   
   #projects-grid {
@@ -228,21 +268,27 @@ h1.title,
     font-size: 0.85rem;
   }
   
-  /* Show description on mobile without hover */
-  .card-content p {
+  /* Always show buttons on mobile (no hover) */
+  .card-buttons {
     opacity: 1;
-    max-height: 200px;
-    margin-top: 0.75rem;
   }
   
-.card-content {
-  background: linear-gradient(
-    to top,
-    rgba(147, 25, 159, 0.9) 0%,
-    rgba(147, 25, 159, 0.7) 70%,
-    transparent 100%
-  );
-}
+  .card-buttons a {
+    transform: translateY(0);
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .card-image {
+    filter: blur(2px);
+  }
+  
+  /* Show description on mobile without hover */
+  .card-content p {
+    max-height: none; /* No limit on mobile */
+    opacity: 1;
+    margin-top: 0.5rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -253,24 +299,6 @@ h1.title,
 
 @media (min-width: 1025px) {
   #projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
-/* Optional: completely remove any inherited black shadows */
-/* .project-card,
-.project-card:hover {
-  filter: none !important;
-}
-
-.project-card {
-  box-shadow: 0 6px 15px rgba(147, 25, 159, 0.6), 
-              0 0 25px rgba(147, 25, 159, 0.3) !important;
-}
-
-.project-card:hover {
-  box-shadow: 0 10px 25px rgba(147, 25, 159, 0.7), 
-              0 0 40px rgba(147, 25, 159, 0.4) !important;
-}
- */
