@@ -492,12 +492,20 @@ hr {
   51%, 100% { opacity: 0; }
 }
 
+/* ====== NAME + WELCOME CONTAINER ====== */
+.name-welcome-container {
+  position: relative;
+  display: inline-block;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
 /* ====== WELCOME MESSAGE ====== */
 .welcome-message {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1.3rem, 3vw, 2rem);
   font-weight: 600;
   color: var(--tangerine);
-  margin: 0 0 1.5rem 0;
+  margin: 0.5rem 0 0 0;
   opacity: 0;
   transform: translateY(-10px) scale(0.95);
   transition: all 0.5s cubic-bezier(0.68, -0.15, 0.265, 1.15);
@@ -509,14 +517,36 @@ hr {
   transform: translateY(0) scale(1);
 }
 
+/* ====== HERO DESCRIPTION (lower, separated) ====== */
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.hero-description a {
+  color: var(--tangerine);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.hero-description a:hover {
+  color: var(--white);
+}
+
 /* ====== FLOATING SYMBOLS ====== */
 .floating-symbols {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
   pointer-events: none;
   z-index: 5;
 }
@@ -525,17 +555,17 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 45px;
-  height: 45px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.5));
 }
 
 .float-symbol.active {
-  opacity: 0.9;
+  opacity: 1;
   transform: translate(
     calc(-50% + var(--x-pos, 0px)), 
     calc(-50% + var(--y-pos, 0px))
@@ -554,54 +584,81 @@ hr {
     transform: translate(
       calc(-50% + var(--x-pos, 0px)), 
       calc(-50% + var(--y-pos, 0px))
-    ) scale(1) translateY(-15px) rotate(5deg); 
+    ) scale(1) translateY(-12px) rotate(4deg); 
   }
 }
 
 /* Different sizes for variety */
 .float-symbol:nth-child(odd) {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
 }
 
 .float-symbol:nth-child(3n) {
-  width: 55px;
-  height: 55px;
+  width: 95px;
+  height: 95px;
 }
 
 .float-symbol:nth-child(4n) {
-  width: 35px;
-  height: 35px;
+  width: 65px;
+  height: 65px;
 }
 
-/* Slight color tints for some symbols */
+.float-symbol:nth-child(5n) {
+  width: 85px;
+  height: 85px;
+}
+
+/* Color tinted shadows matching your palette */
 .float-symbol:nth-child(2n) {
-  filter: drop-shadow(0 4px 12px rgba(253, 134, 96, 0.4));
+  filter: drop-shadow(0 6px 18px rgba(253, 134, 96, 0.5));
 }
 
 .float-symbol:nth-child(3n) {
-  filter: drop-shadow(0 4px 12px rgba(147, 25, 159, 0.4));
+  filter: drop-shadow(0 6px 18px rgba(147, 25, 159, 0.5));
 }
 
-/* Responsive adjustments */
+.float-symbol:nth-child(5n) {
+  filter: drop-shadow(0 6px 18px rgba(116, 98, 190, 0.5));
+}
+
+.float-symbol:nth-child(7n) {
+  filter: drop-shadow(0 6px 18px rgba(240, 101, 141, 0.5));
+}
+
+/* Responsive adjustments for floating symbols */
 @media (max-width: 1200px) {
   .float-symbol {
-    width: 38px;
-    height: 38px;
+    width: 65px;
+    height: 65px;
   }
   
   .float-symbol:nth-child(3n) {
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .float-symbol:nth-child(5n) {
+    width: 70px;
+    height: 70px;
   }
 }
 
 @media (max-width: 768px) {
   .floating-symbols {
-    display: none; /* Hide on mobile for cleaner look */
+    display: none;
   }
   
   .welcome-message {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+  
+  .name-welcome-container {
+    margin-bottom: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }

@@ -14,7 +14,7 @@ format:
     </p>
     
     <!-- Welcome message that fades in -->
-    <p class="welcome-message" id="welcome-message">Welcome to my personal portfolio!</p>
+    <p class="welcome-message" id="welcome-message" style="margin-bottom: 2rem;">Welcome to my personal portfolio!</p>
     
     <!-- Floating Data Science Symbols -->
     <div class="floating-symbols" id="floating-symbols">
@@ -27,13 +27,13 @@ format:
       <img src="images/icons/nn1.png" alt="Neural Net" class="float-symbol" data-delay="5">
       <img src="images/icons/code.png" alt="Code" class="float-symbol" data-delay="6">
       <img src="images/icons/graph.png" alt="Graph" class="float-symbol" data-delay="7">
-      <img src="images/icons/tensor.png" alt="Tensor" class="float-symbol" data-delay="8">
+      <img src="images/icons/tensor.svg" alt="Tensor" class="float-symbol" data-delay="8">
       <img src="images/icons/data.png" alt="Data" class="float-symbol" data-delay="9">
       <img src="images/icons/nn2.png" alt="Neural Network" class="float-symbol" data-delay="10">
     </div>
     
-    <p class="hero-subtitle" style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 1.5rem;">
-      I'm an M.S. Data Science student at Georgetown University, and I'm glad you've found me! Here, you can learn more about me, see my <a href="resume.html" style="color: #ffffff; text-decoration: underline;">resume</a>, and explore some of my <a href="projects.html" style="color: #fd8660; text-decoration: underline;">projects</a>.
+    <p class="hero-subtitle" style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 1rem;">
+      Here, you can learn more about me, see my <a href="resume.html" style="color: #f9bb81ff; text-decoration: underline;">resume</a>, and explore some of my <a href="projects.html" style="color: #7462be; text-decoration: underline;">projects</a>.
     </p>
     <div class="hero-icons">
       <a href="https://www.linkedin.com/in/viviana-luccioli" target="_blank" aria-label="LinkedIn">
