@@ -419,3 +419,48 @@ hr {
 #quarto-header .navbar-nav .nav-item:hover i {
   color: var(--pink) !important;
 }
+
+/* ====== FUNKY GREETING ANIMATION ====== */
+.greeting {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Merriweather", Georgia, serif;
+  margin-bottom: 1.5rem !important;
+}
+
+.gradient-name {
+  background: linear-gradient(
+    90deg,
+    var(--blue-purple),
+    var(--flower-purple),
+    var(--pink),
+    var(--tangerine),
+    var(--orange-pink),
+    var(--blue-purple)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-hand 2.5s ease-in-out infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-hand {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50%, 100% { transform: rotate(0deg); }
+}
