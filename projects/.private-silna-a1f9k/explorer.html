@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prior Auth Agent · Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="header-tag">Prior Auth Agent &nbsp;/&nbsp; Case Study</div>
+      <h1>Performance <span>Dashboard</span></h1>
+    </div>
+    <div class="header-meta">
+      759 submission results captured &nbsp;·&nbsp; Sep 12 – Oct 31 2025<br>
+      2 autonomous agents across 5 provider × payor combinations
+    </div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi" style="--kpi-color:var(--pink)"><div class="kpi-label">Success Rate</div><div class="kpi-value">90.0%</div><div class="kpi-sub">683 / 759 submissions</div></div>
+  <div class="kpi" style="--kpi-color:var(--red)"><div class="kpi-label">Total Submission Results</div><div class="kpi-value">759</div><div class="kpi-sub">76 hard failures · 683 successes</div></div>
+  <div class="kpi" style="--kpi-color:var(--orange)"><div class="kpi-label">Silent Failures</div><div class="kpi-value">44.8%</div><div class="kpi-sub">306 / 759 submitted w/ incorrect OCR</div></div>
+  <div class="kpi" style="--kpi-color:var(--muted)"><div class="kpi-label">Avg OCR Accuracy</div><div class="kpi-value">80.6%</div><div class="kpi-sub">Across all runs</div></div>
+  <div class="kpi" style="--kpi-color:var(--teal)"><div class="kpi-label">Auto-Submit Ready</div><div class="kpi-value">1</div><div class="kpi-sub">BC2 × Humana only</div></div>
+</div>
+
+<details class="data-overview">
+  <summary>Data Overview</summary>
+  <div class="data-summary">
+  <p>This dataset spans <strong style="color:var(--text)">September 12, 2025 through October 31, 2025</strong> and reflects submission outcomes collected by <strong style="color:var(--text)">two separate automation agents</strong> operating across the same payer portals.</p>
+  <table>
+    <thead>
+      <tr><th>Provider × Payor</th><th>First Appears</th><th>Total Appearances</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Behavior Clinic 1 × Humana</td><td>2025-10-01</td><td>400</td></tr>
+      <tr><td>Behavior Clinic 1 × UHC</td><td>2025-09-12</td><td>254</td></tr>
+      <tr><td>Behavior Clinic 2 × Humana</td><td>2025-10-17</td><td>52</td></tr>
+      <tr><td>Behavior Clinic 2 × UHC</td><td>2025-10-26</td><td>15</td></tr>
+      <tr><td>Physical Health Clinic 1 × Inland Empire Health Plan</td><td>2025-10-16</td><td>38</td></tr>
+    </tbody>
+  </table>
+</div>
+</details>
+<nav class="nav">
+  <a class="nav-btn" href="./overview.html">A &middot; Key Patterns</a>
+  <a class="nav-btn" href="./readiness.html">B &middot; Readiness Assessment</a>
+  <a class="nav-btn" href="./recommendations.html">Recommendations</a>
+  <a class="nav-btn active" href="./explorer.html">Explorer</a>
+</nav>
+<div id="section-data" class="section active">
+  <div class="section-label">Full Data Explorer</div>
+  <div class="filter-bar">
+    <span class="fl">Provider</span>
+    <select class="fs" id="f-dba" onchange="filterMain()">
+      <option value="">All</option><option>Behavior Clinic 1</option><option>Behavior Clinic 2</option><option>Physical Health Clinic 1</option>
+    </select>
+    <span class="fl">Payor</span>
+    <select class="fs" id="f-name" onchange="filterMain()">
+      <option value="">All</option><option>Humana</option><option>UHC</option><option>Inland Empire Health Plan</option>
+    </select>
+    <span class="fl">Status</span>
+    <select class="fs" id="f-status" onchange="filterMain()">
+      <option value="">All</option><option value="SUCCESS">Success</option><option value="FAIL">Fail</option>
+    </select>
+    <span class="fl">Fail Cat</span>
+    <select class="fs" id="f-failcat" onchange="filterMain()">
+      <option value="">All</option>
+      <option>Patient Not Found</option><option>Credential Issue</option><option>Agent Timeout</option>
+      <option>Document Upload Failed</option><option>Portal/Network Error</option><option>Delegated Auth Issue</option><option>Unknown</option>
+    </select>
+    <input class="fi" id="f-search" type="text" placeholder="Search…" oninput="filterMain()" style="width:160px">
+    <button class="fbt" onclick="resetMain()" style="margin-left:auto">Reset</button>
+    <span id="main-count" style="font-size:12px;color:var(--muted)"></span>
+  </div>
+  <div id="data-table"></div>
+</div>
+<footer>Prior Auth Agent &nbsp;·&nbsp; Performance Dashboard &nbsp;·&nbsp; Case Study Presentation</footer>
+</div>
+<script>window.DASHBOARD_PAGE = 'data';</script>
+<script src="./app.js"></script>
+</body>
+</html>

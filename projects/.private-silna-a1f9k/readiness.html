@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prior Auth Agent · Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="header-tag">Prior Auth Agent &nbsp;/&nbsp; Case Study</div>
+      <h1>Performance <span>Dashboard</span></h1>
+    </div>
+    <div class="header-meta">
+      759 submission results captured &nbsp;·&nbsp; Sep 12 – Oct 31 2025<br>
+      2 autonomous agents across 5 provider × payor combinations
+    </div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi" style="--kpi-color:var(--pink)"><div class="kpi-label">Success Rate</div><div class="kpi-value">90.0%</div><div class="kpi-sub">683 / 759 submissions</div></div>
+  <div class="kpi" style="--kpi-color:var(--red)"><div class="kpi-label">Total Submission Results</div><div class="kpi-value">759</div><div class="kpi-sub">76 hard failures · 683 successes</div></div>
+  <div class="kpi" style="--kpi-color:var(--orange)"><div class="kpi-label">Silent Failures</div><div class="kpi-value">44.8%</div><div class="kpi-sub">306 / 759 submitted w/ incorrect OCR</div></div>
+  <div class="kpi" style="--kpi-color:var(--muted)"><div class="kpi-label">Avg OCR Accuracy</div><div class="kpi-value">80.6%</div><div class="kpi-sub">Across all runs</div></div>
+  <div class="kpi" style="--kpi-color:var(--teal)"><div class="kpi-label">Auto-Submit Ready</div><div class="kpi-value">1</div><div class="kpi-sub">BC2 × Humana only</div></div>
+</div>
+
+<details class="data-overview">
+  <summary>Data Overview</summary>
+  <div class="data-summary">
+  <p>This dataset spans <strong style="color:var(--text)">September 12, 2025 through October 31, 2025</strong> and reflects submission outcomes collected by <strong style="color:var(--text)">two separate automation agents</strong> operating across the same payer portals.</p>
+  <table>
+    <thead>
+      <tr><th>Provider × Payor</th><th>First Appears</th><th>Total Appearances</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Behavior Clinic 1 × Humana</td><td>2025-10-01</td><td>400</td></tr>
+      <tr><td>Behavior Clinic 1 × UHC</td><td>2025-09-12</td><td>254</td></tr>
+      <tr><td>Behavior Clinic 2 × Humana</td><td>2025-10-17</td><td>52</td></tr>
+      <tr><td>Behavior Clinic 2 × UHC</td><td>2025-10-26</td><td>15</td></tr>
+      <tr><td>Physical Health Clinic 1 × Inland Empire Health Plan</td><td>2025-10-16</td><td>38</td></tr>
+    </tbody>
+  </table>
+</div>
+</details>
+<nav class="nav">
+  <a class="nav-btn" href="./overview.html">A &middot; Key Patterns</a>
+  <a class="nav-btn active" href="./readiness.html">B &middot; Readiness Assessment</a>
+  <a class="nav-btn" href="./recommendations.html">Recommendations</a>
+  <a class="nav-btn" href="./explorer.html">Explorer</a>
+</nav>
+<div id="section-readiness" class="section active">
+  <div class="section-label">B &middot; Readiness Assessment</div>
+  <div class="section-desc">Which provider-payor combinations can have the authorization specialist removed from the loop?</div>
+
+  <!-- Full-width failure breakdown with toggle -->
+  <div class="full-width card">
+    <div class="card-title">Failure Mode Breakdown by Combination</div>
+    <div class="card-sub">Toggle to view hard failures (agent did not submit), or success quality (clean vs. silent failures by severity). Unit mode and P×P filters apply to both charts below.</div>
+    <div class="trend-toolbar">
+      <div class="toggle-row" id="readiness-unit-toggle">
+        <button class="tog active" data-runit="raw" onclick="setReadinessUnit('raw',this)">Raw Frequency</button>
+        <button class="tog" data-runit="prop" onclick="setReadinessUnit('prop',this)">Proportion</button>
+      </div>
+    </div>
+    <div class="toggle-row" id="fail-view-toggle">
+      <button class="tog active" onclick="setFailView('fail',this)">Hard Failures</button>
+      <button class="tog" onclick="setFailView('success',this)">Success Quality</button>
+    </div>
+    <div id="chart-fail-breakdown"></div>
+    <div class="card-title" style="margin-top:14px;">Daily Readiness Timeline</div>
+    <div class="card-sub">Tracks the same categories shown above over time. Switch units between raw frequency and proportion of total daily rows.</div>
+    <div class="trend-pxp" style="margin-bottom:12px;">
+      <div class="fl">Provider × Payor</div>
+      <div id="readiness-pxp-legend" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;"></div>
+    </div>
+    <div id="chart-readiness-trend"></div>
+  </div>
+
+  <div class="section-label" style="margin-top:28px;">Key Observations</div>
+  <div class="insight">
+    <strong>Observed Pattern:</strong> Failures are not evenly distributed over time; they cluster around specific windows, which suggests episodic instability rather than constant low-level noise. Root causes also differ by provider-payor combination: some failure modes point to data-quality and extraction issues (for example, patient lookup mismatches and timeout-driven incomplete workflows), while others indicate broader platform and integration reliability problems (such as portal/network errors and authentication breakdowns). This means remediation should be combination-specific, not one global fix.
+  </div>
+
+  <div class="section-label" style="margin-top:28px;">Production Risks</div>
+  <div class="risk-grid">
+    <div class="risk-card"><h4>🔐 Credential Failures — 19</h4><p>Stale credentials cause silent loops. Lock-outs can block entire queues.</p><div class="mit"><strong>Mitigation:</strong> Pre-validate login before each batch. Alert within 5 min of first auth failure. Secrets manager with rotation triggers.</div></div>
+    <div class="risk-card"><h4>👤 Patient Not Found — 17</h4><p>Mismatched member ID or DOB from OCR. Risk: wrong patient or silently dropped authorization.</p><div class="mit"><strong>Mitigation:</strong> Patient match confidence score. If lookup = 0, route to human. Log search params for audit.</div></div>
+    <div class="risk-card"><h4>⏱️ Agent Timeout — 7 (UHC only)</h4><p>Max 3-hour timeout on UHC portal. Risk: partial submissions left open.</p><div class="mit"><strong>Mitigation:</strong> Per-step timing. Checkpoint resumption. Human handoff alert at 2h.</div></div>
+    <div class="risk-card"><h4>📄 Document Upload — 4</h4><p>Required docs fail to attach. PA without supporting docs will be denied.</p><div class="mit"><strong>Mitigation:</strong> Post-upload screenshot verify. Halt if doc count mismatches expected.</div></div>
+    <div class="risk-card"><h4>🔀 Delegated Auth — 5</h4><p>Auth delegated to different insurer. Agent goes to wrong portal, risks duplicates.</p><div class="mit"><strong>Mitigation:</strong> Pre-flight delegation check in system prompt. Route or flag on detection.</div></div>
+    <div class="risk-card"><h4>🌐 Portal 403 — 7 (UHC)</h4><p>Rate limiting or session expiry. Could escalate at higher volume.</p><div class="mit"><strong>Mitigation:</strong> Exponential backoff. Session keep-alive. Circuit-breaker on 3+ sequential 403s.</div></div>
+  </div>
+
+  <div class="section-label" style="margin-top:28px;">Row-Level Silent Failure Explorer</div>
+  <div class="filter-bar">
+    <span class="fl">Combo</span>
+    <select class="fs" id="sf-filter-combo" onchange="filterSFTable()">
+      <option value="">All</option>
+      <option>Behavior Clinic 1 × Humana</option>
+      <option>Behavior Clinic 1 × UHC</option>
+      <option>Behavior Clinic 2 × Humana</option>
+      <option>Behavior Clinic 2 × UHC</option>
+      <option>Physical Health Clinic 1 × Inland Empire Health Plan</option>
+    </select>
+    <div class="fdiv"></div>
+    <span class="fl">Severity</span>
+    <button class="tog active" data-sev="" onclick="setSev(this,'')">All</button>
+    <button class="tog" data-sev="Severe" onclick="setSev(this,'Severe')">Severe</button>
+    <button class="tog" data-sev="High" onclick="setSev(this,'High')">High</button>
+    <button class="tog" data-sev="Moderate" onclick="setSev(this,'Moderate')">Moderate</button>
+    <button class="tog" data-sev="Low" onclick="setSev(this,'Low')">Low</button>
+    <div class="fdiv"></div>
+    <input class="fi" id="sf-search" type="text" placeholder="Search PA ID…" oninput="filterSFTable()" style="width:160px">
+    <button class="fbt" onclick="resetSF()" style="margin-left:auto">Reset</button>
+    <span id="sf-count" style="font-size:12px;color:var(--muted)"></span>
+  </div>
+  <div id="sf-table"></div>
+</div>
+<footer>Prior Auth Agent &nbsp;·&nbsp; Performance Dashboard &nbsp;·&nbsp; Case Study Presentation</footer>
+</div>
+<script>window.DASHBOARD_PAGE = 'readiness';</script>
+<script src="./app.js"></script>
+</body>
+</html>

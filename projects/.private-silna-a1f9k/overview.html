@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prior Auth Agent · Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+<link href="https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="header-tag">Prior Auth Agent &nbsp;/&nbsp; Case Study</div>
+      <h1>Performance <span>Dashboard</span></h1>
+    </div>
+    <div class="header-meta">
+      759 submission results captured &nbsp;·&nbsp; Sep 12 – Oct 31 2025<br>
+      2 autonomous agents across 5 provider × payor combinations
+    </div>
+  </div>
+</header>
+
+<div class="kpi-strip">
+  <div class="kpi" style="--kpi-color:var(--pink)"><div class="kpi-label">Success Rate</div><div class="kpi-value">90.0%</div><div class="kpi-sub">683 / 759 submissions</div></div>
+  <div class="kpi" style="--kpi-color:var(--red)"><div class="kpi-label">Total Submission Results</div><div class="kpi-value">759</div><div class="kpi-sub">76 hard failures · 683 successes</div></div>
+  <div class="kpi" style="--kpi-color:var(--orange)"><div class="kpi-label">Silent Failures</div><div class="kpi-value">44.8%</div><div class="kpi-sub">306 / 759 submitted w/ incorrect OCR</div></div>
+  <div class="kpi" style="--kpi-color:var(--muted)"><div class="kpi-label">Avg OCR Accuracy</div><div class="kpi-value">80.6%</div><div class="kpi-sub">Across all runs</div></div>
+  <div class="kpi" style="--kpi-color:var(--teal)"><div class="kpi-label">Auto-Submit Ready</div><div class="kpi-value">1</div><div class="kpi-sub">BC2 × Humana only</div></div>
+</div>
+
+<details class="data-overview">
+  <summary>Data Overview</summary>
+  <div class="data-summary">
+  <p>This dataset spans <strong style="color:var(--text)">September 12, 2025 through October 31, 2025</strong> and reflects submission outcomes collected by <strong style="color:var(--text)">two separate automation agents</strong> operating across the same payer portals.</p>
+  <table>
+    <thead>
+      <tr><th>Provider × Payor</th><th>First Appears</th><th>Total Appearances</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Behavior Clinic 1 × Humana</td><td>2025-10-01</td><td>400</td></tr>
+      <tr><td>Behavior Clinic 1 × UHC</td><td>2025-09-12</td><td>254</td></tr>
+      <tr><td>Behavior Clinic 2 × Humana</td><td>2025-10-17</td><td>52</td></tr>
+      <tr><td>Behavior Clinic 2 × UHC</td><td>2025-10-26</td><td>15</td></tr>
+      <tr><td>Physical Health Clinic 1 × Inland Empire Health Plan</td><td>2025-10-16</td><td>38</td></tr>
+    </tbody>
+  </table>
+</div>
+</details>
+<nav class="nav">
+  <a class="nav-btn active" href="./overview.html">A &middot; Key Patterns</a>
+  <a class="nav-btn" href="./readiness.html">B &middot; Readiness Assessment</a>
+  <a class="nav-btn" href="./recommendations.html">Recommendations</a>
+  <a class="nav-btn" href="./explorer.html">Explorer</a>
+</nav>
+<div id="section-overview" class="section active">
+  <div class="section-label">A &middot; Key Patterns</div>
+  <div class="section-desc">Provider-payor performance at a glance. Toggle the matrix and ranked comparison charts to explore different metrics.</div>
+
+  <!-- ROW 1: bar + heatmap -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Provider-Payor Ranked Comparison</div>
+      <div class="toggle-row" id="bar-toggle-row">
+        <button class="tog active" onclick="setBarMetric('success_rate',this)">Success Rate</button>
+        <button class="tog" onclick="setBarMetric('total',this)">Volume</button>
+        <button class="tog" onclick="setBarMetric('avg_ocr',this)">OCR Accuracy</button>
+        <button class="tog" onclick="setBarMetric('silent_rate',this)">Silent Failure Rate</button>
+      </div>
+      <div id="chart-bar"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Provider × Payor Matrix</div>
+      <div class="toggle-row" id="heat-toggle-row">
+        <button class="tog active" onclick="setHeatMetric('success_rate',this)">Success Rate</button>
+        <button class="tog" onclick="setHeatMetric('total',this)">Volume</button>
+        <button class="tog" onclick="setHeatMetric('avg_ocr',this)">OCR Accuracy</button>
+        <button class="tog" onclick="setHeatMetric('silent_rate',this)">Silent Failure Rate</button>
+      </div>
+      <div id="chart-heatmap"></div>
+    </div>
+  </div>
+
+  <div class="full-width card" id="hover-metric-card" style="display:none;">
+    <div class="card-title">Hovered P×P Metric Over Time</div>
+    <div class="card-sub">Updates when hovering Provider-Payor Ranked Comparison or Provider × Payor Matrix. Uses full dataset timeline (Sep 12, 2025 – Oct 31, 2025).</div>
+    <div id="chart-hover-metric"></div>
+  </div>
+
+  <!-- ROW 2: trend -->
+  <div class="full-width card">
+    <div class="card-title">Daily Trend — Success Rate &amp; OCR Accuracy</div>
+    <div class="card-sub"><span class="dot-pulse"></span>Anomaly window Oct 28–30 (avg 79.7%). Pink = success rate (left axis). Yellow = avg OCR accuracy (right axis).</div>
+    <div class="trend-toolbar">
+      <div class="toggle-row" id="trend-view-toggle">
+        <button class="tog active" data-trend-view="aggregate" onclick="setTrendView('aggregate',this)">Aggregate</button>
+        <button class="tog" data-trend-view="individual" onclick="setTrendView('individual',this)">Individuals</button>
+      </div>
+      <div class="trend-bubble-legend">
+        <span class="fl">Success Bubble Colors</span>
+        <span><i style="background:#7a1a3a"></i>Lower</span>
+        <span><i style="background:#ff5dc0"></i>Mid</span>
+        <span><i style="background:#ffd166"></i>Higher</span>
+      </div>
+    </div>
+    <div class="trend-layout">
+      <div id="chart-trend"></div>
+      <div class="trend-pxp">
+        <div class="fl">Provider × Payor</div>
+        <div id="trend-pxp-legend"></div>
+      </div>
+    </div>
+    <div class="card-sub" style="margin-top:10px;">Daily Total Rows</div>
+    <div id="chart-trend-rows"></div>
+  </div>
+
+<div class="insight">
+  <strong>Key Patterns:</strong>
+  <ul>
+    <li><strong>Provider × Payor Performance:</strong>
+      <ul>
+        <li><strong>BC2 × Humana</strong> leads on all metrics: 100% success, 95.5% OCR, lowest silent failure rate
+          (21.2%). However, this is based on only 52 observations.</li>
+        <li><strong>BC1 × UHC</strong> is the weakest performer: 67.6% OCR, 49.3% silent failure rate, and the only
+          combo with agent timeouts and 403 portal errors. The Oct 28–30 dip maps almost entirely to BC1 × UHC failures.
+        </li>
+        <li><strong>Physical Health Clinic 1 × IEHP</strong> shows strong OCR (91.5%) but only 76.3% success—pointing to
+          a structural credential issue rather than data quality.</li>
+      </ul>
+    </li>
+    <li><strong>Time Trends:</strong>
+      <ul>
+        <li><strong>BC1 × UHC</strong> has been tested the longest, dating back to when OCR accuracy was very poor. Other
+          clinic-payor combos were introduced later. It's unclear whether early poor performance reflects immature OCR
+          technology/configuration at the time, or an inherent issue with UHC's portal.</li>
+        <li>OCR accuracy was poor across the board initially but improved significantly after 09/27.</li>
+        <li>Success rate improvements began earlier than OCR accuracy gains.</li>
+      </ul>
+    </li>
+    <li><strong>Caveats:</strong> Imbalanced observation counts across provider-payor combos limit direct comparisons.
+    </li>
+  </ul>
+</div>
+<footer>Prior Auth Agent &nbsp;·&nbsp; Performance Dashboard &nbsp;·&nbsp; Case Study Presentation</footer>
+</div>
+<script>window.DASHBOARD_PAGE = 'overview';</script>
+<script src="./app.js"></script>
+</body>
+</html>
