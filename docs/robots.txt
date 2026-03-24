@@ -1,1 +1,5 @@
 Sitemap: https://viviluccioli.github.io/portfolio/sitemap.xml
+
+User-agent: *
+Disallow: /portfolio/projects/.private-silna-a1f9k/
+Disallow: /projects/.private-silna-a1f9k/

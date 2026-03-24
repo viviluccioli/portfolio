@@ -69,7 +69,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="css/ombre.css">
+<link rel="stylesheet" href="css/dark-theme.css">
+<link rel="stylesheet" href="css/dark-projects.css">
 </head>
 
 <body class="nav-fixed">
@@ -137,17 +138,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="hero-section">
+  <!-- Scanning laser beam -->
+  <div class="laser-beam"></div>
+
   <div class="hero-content">
     <p class="typewriter-name" id="typewriter">
       <span id="typed-text"></span><span class="cursor">|</span>
     </p>
-    
+
     <!-- Welcome message that fades in -->
     <p class="welcome-message" id="welcome-message" style="margin-bottom: 2rem;">Welcome to my personal portfolio!</p>
-    
+
     <!-- Floating Data Science Symbols -->
     <div class="floating-symbols" id="floating-symbols">
-      <!-- Images - replace src with your own icons/images -->
       <img src="images/icons/python.png" alt="Python" class="float-symbol" data-delay="0">
       <img src="images/icons/r.png" alt="R" class="float-symbol" data-delay="1">
       <img src="images/icons/ai.png" alt="AI" class="float-symbol" data-delay="2">
@@ -160,9 +163,9 @@ ul.task-list li input[type="checkbox"] {
       <img src="images/icons/data.png" alt="Data" class="float-symbol" data-delay="9">
       <img src="images/icons/nn2.png" alt="Neural Network" class="float-symbol" data-delay="10">
     </div>
-    
+
     <p class="hero-subtitle" style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 1rem;">
-      Here, you can learn more about me, see my <a href="resume.html" style="color: #f9bb81ff; text-decoration: underline;">resume</a>, and explore some of my <a href="projects.html" style="color: #7462be; text-decoration: underline;">projects</a>.
+      Here, you can learn more about me, see my <a href="resume.html" style="color: #fd8660; text-decoration: underline;">resume</a>, and explore some of my <a href="projects.html" style="color: #7462be; text-decoration: underline;">projects</a>.
     </p>
     <div class="hero-icons">
       <a href="https://www.linkedin.com/in/viviana-luccioli" target="_blank" aria-label="LinkedIn">
@@ -191,29 +194,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const cursor = document.querySelector('.cursor');
   const welcomeMessage = document.getElementById('welcome-message');
   const symbols = document.querySelectorAll('.float-symbol');
-  
+
   let charIndex = 0;
   let isDeleting = false;
   let symbolsActive = false;
-  
+
   // Typewriter function
   function typeWriter() {
     if (!isDeleting && charIndex <= name.length) {
       typedText.textContent = name.substring(0, charIndex);
       charIndex++;
-      
+
       if (charIndex > name.length) {
         // Finished typing - show welcome message
         setTimeout(() => {
           welcomeMessage.classList.add('visible');
         }, 300);
-        
+
         // Then start floating symbols
         setTimeout(() => {
           symbolsActive = true;
           activateSymbols();
         }, 800);
-        
+
         // Wait then start deleting
         setTimeout(() => {
           isDeleting = true;
@@ -228,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (isDeleting && charIndex >= 0) {
       typedText.textContent = name.substring(0, charIndex);
       charIndex--;
-      
+
       if (charIndex < 0) {
         // Finished deleting - restart
         isDeleting = false;
@@ -238,28 +241,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-  
+
   // Activate floating symbols with staggered timing
   function activateSymbols() {
     symbols.forEach((symbol, index) => {
       // Position symbols in a very wide ellipse, far from center
       const angle = (index / symbols.length) * 360;
-      const radiusX = 450 + Math.random() * 120; // Even wider horizontal spread
-      const radiusY = 280 + Math.random() * 100;  // Taller vertical spread
+      const radiusX = 450 + Math.random() * 120;
+      const radiusY = 280 + Math.random() * 100;
       const x = Math.cos(angle * Math.PI / 180) * radiusX;
       const y = Math.sin(angle * Math.PI / 180) * radiusY;
-      
+
       symbol.style.setProperty('--x-pos', `${x}px`);
       symbol.style.setProperty('--y-pos', `${y}px`);
-      
+
       setTimeout(() => {
         if (symbolsActive) {
           symbol.classList.add('active');
-          
+
           // Pop out after random duration
           setTimeout(() => {
             symbol.classList.remove('active');
-            
+
             // Pop back in if still active
             if (symbolsActive) {
               setTimeout(() => {
@@ -273,13 +276,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }, index * 150);
     });
   }
-  
+
   function hideAllSymbols() {
     symbols.forEach(symbol => {
       symbol.classList.remove('active');
     });
   }
-  
+
   // Continuous symbol animation loop
   setInterval(() => {
     if (symbolsActive) {
@@ -290,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }, 1000);
-  
+
   // Start the animation
   typeWriter();
 });
@@ -299,18 +302,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="bio-section">
   <h2 style="text-align: center; margin-bottom: 2rem; grid-column: 1 / -1;" class="anchored">About Me</h2>
-  
+
   <div class="bio-image">
     <img src="images/headshot2.png" alt="Viviana Luccioli">
   </div>
-  
+
   <div class="bio-text">
     <p class="greeting">Hi, I'm <span class="gradient-name">Viviana</span>! <span class="wave">👋</span></p>
-    <p>I am a second-year M.S. student in Georgetown University's Data Science and Analytics program, graduating in May 2026. Alongside my studies, I intern part-time at the Federal Reserve Board in Washington, D.C., where I build dashboards and automation processes in the IT Statistics &amp; Data Management division while also collaborating through the AI program with senior economists and researchers in Financial Stability and International Finance to develop AI agents and research assistants that enhance and support their critical research.</p>
+    <p>I am a second-year M.S. student in Georgetown University's Data Science and Analytics program, graduating in May 2026. Alongside my studies, I serve as an AI Intern at the Federal Reserve Board of Governors in Washington, D.C., where I am an inaugural member of the Financial Stability Cyber and AI Sentinel Lab. I design and deploy AI systems that support economic research, including multi-agent research assistants, GraphRAG architectures over financial knowledge graphs, and time-series transformer models for financial stability analysis. I am also the first author of <em><a href="https://arxiv.org/pdf/2511.11574" target="_blank">LLM on a Budget</a></em> (IEEE Big Data 2025), introducing an active learning framework that reduces labeling costs by 80% while preserving model performance.</p>
 
-    <p>I'm actively involved in my Georgetown community! I currently serve as a Professional Development Center assistant, where I help fellow data science students refine their resumes and cover letters for optimal impact in technical fields, and contribute blog posts to our program website. Last year, I was also aresearch assistant in Dr. Qiwei (Britt) He's AI Measurement and Development (AIMD) Lab and served as a teaching assistant for DSAN 6150: Biological and Biomedical Data Science.</p>
+    <p>My research interests center on <strong>AI evaluation &amp; benchmarking</strong> — designing rigorous frameworks that measure how well AI systems generalize, behave under distribution shift, and align with downstream objectives. I'm especially drawn to evaluating agentic and multi-agent systems, probing emergent behaviors, and developing methods for assessing zero-shot forecasting and reasoning capabilities.</p>
 
-    <p>I also hold two B.A. degrees from the University of Virginia in Statistics (concentration in Biostatistics) and Global Public Health.</p>
+    <p>I'm actively involved in my Georgetown community! I currently serve as a Professional Development Center assistant and was also a research assistant in Dr. Qiwei (Britt) He's AI Measurement and Development (AIMD) Lab.</p>
+
+    <p>I also hold two B.A. degrees from the University of Virginia in Applied Statistics (concentration in Biostatistics) and Global Public Health.</p>
   </div>
 </div>
 
@@ -318,11 +323,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="interests" class="level3 about-card">
 <h3 class="anchored" data-anchor-id="interests">⭐ Interests</h3>
 <ul>
-<li>Agentic AI</li>
+<li>Agentic AI &amp; Multi-Agent Systems</li>
+<li>AI Evaluation &amp; Benchmarking</li>
 <li>Interactive Data Visualization</li>
-<li>Image Processing</li>
-<li>AI Research</li>
-<li>Machine Learning App Deployment</li>
+<li>Time Series Transformers</li>
+<li>ML App Deployment</li>
+<li>Image Processing &amp; Computer Vision</li>
 </ul>
 </section>
 <section id="other" class="level3 about-card">
@@ -340,11 +346,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <ul>
 <li>Recipient of Georgetown University’s Merit Scholarship (2024, 2025)</li>
-<li>Nominee, Georgetown 2025 Graduate Student Awards</li>
-<li>First Place, DC Metro StatConnect Conference – Graduate Research Paper Competition</li>
+<li>First Place, DC Metro StatConnect Conference 2025 – Graduate Research Paper Competition</li>
+<li>Nominee, 2025 Outstanding Georgetown Graduate Student Award</li>
 <li>Research:
 <ul>
-<li><a href="https://www.arxiv.org/pdf/2511.11574"><em>LLM on a Budget: Active Knowledge Distillation for Efficient Classification of Large Text Corpora</em></a>
+<li><a href="https://www.arxiv.org/pdf/2511.11574"><em>LLM on a Budget: Cost-Effective Knowledge Distillation for Efficient Classification of Large Text Corpora</em></a>
 <ul>
 <li>Published in IEEE Big Data 2025 and as a FEDS Notes paper</li>
 <li>In affiliation with Federal Reserve Board of Governors</li>
@@ -354,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 <div class="tech-stack-container">
   <h2 style="text-align: center; margin-bottom: 2rem;" class="anchored">Tech Stack</h2>
-  
+
   <div class="legend">
     <div class="legend-item">
       <div class="legend-color cat-languages"></div>
@@ -396,7 +402,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="sub-bubble cat-languages">TensorFlow</div>
         <div class="sub-bubble cat-languages">Scikit-learn</div>
         <div class="sub-bubble cat-languages">SciPy</div>
-        <div class="sub-bubble cat-languages">NLTK</div>
+        <div class="sub-bubble cat-languages">SpaCy</div>
+        <div class="sub-bubble cat-languages">Pandas</div>
+        <div class="sub-bubble cat-languages">Polars</div>
+        <div class="sub-bubble cat-languages">Streamlit</div>
         <div class="sub-bubble cat-languages">XGBoost</div>
         <div class="sub-bubble cat-languages">StatsModels</div>
         <div class="sub-bubble cat-languages">Hugging Face</div>
@@ -419,10 +428,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <div class="bubble cat-languages">SQL</div>
-    <div class="bubble cat-languages">HTML/CSS</div>
-    <div class="bubble cat-languages">Java</div>
+    <div class="bubble cat-languages">JavaScript</div>
+    <div class="bubble cat-languages">CSS</div>
     <div class="bubble cat-languages">SAS</div>
-    <div class="bubble cat-languages">SPSS</div>
 
     <!-- Machine Learning -->
     <div class="bubble cat-ml has-children">
@@ -432,6 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="sub-bubble cat-ml">CNNs</div>
         <div class="sub-bubble cat-ml">RNNs</div>
         <div class="sub-bubble cat-ml">Transformers</div>
+        <div class="sub-bubble cat-ml">EfficientNet</div>
       </div>
     </div>
 
@@ -439,13 +448,24 @@ document.addEventListener('DOMContentLoaded', function() {
       NLP
       <div class="sub-bubbles">
         <div class="sub-bubble cat-ml">LLMs</div>
-        <div class="sub-bubble cat-ml">BERT</div>
-        <div class="sub-bubble cat-ml">DistilBERT</div>
+        <div class="sub-bubble cat-ml">BERT / DistilBERT</div>
         <div class="sub-bubble cat-ml">FinBERT</div>
-        <div class="sub-bubble cat-ml">Machine Translation</div>
         <div class="sub-bubble cat-ml">Topic Modeling</div>
-        <div class="sub-bubble cat-ml">Information Retrieval</div>
-        <div class="sub-bubble cat-ml">Semantic Analysis</div>
+        <div class="sub-bubble cat-ml">NER</div>
+        <div class="sub-bubble cat-ml">Embeddings</div>
+        <div class="sub-bubble cat-ml">Sentiment Analysis</div>
+      </div>
+    </div>
+
+    <div class="bubble cat-ml has-children">
+      Agentic AI
+      <div class="sub-bubbles">
+        <div class="sub-bubble cat-ml">Multi-Agent Systems</div>
+        <div class="sub-bubble cat-ml">LangGraph</div>
+        <div class="sub-bubble cat-ml">RAG / GraphRAG</div>
+        <div class="sub-bubble cat-ml">MCP</div>
+        <div class="sub-bubble cat-ml">A2A Protocol</div>
+        <div class="sub-bubble cat-ml">Agent Orchestration</div>
       </div>
     </div>
 
@@ -455,12 +475,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="sub-bubble cat-ml">SVM</div>
         <div class="sub-bubble cat-ml">Logistic Regression</div>
         <div class="sub-bubble cat-ml">Random Forests</div>
-        <div class="sub-bubble cat-ml">GBDT</div>
+        <div class="sub-bubble cat-ml">GBDT / XGBoost</div>
         <div class="sub-bubble cat-ml">LDA/QDA</div>
       </div>
     </div>
-
-    <div class="bubble cat-ml">Regression</div>
 
     <div class="bubble cat-ml has-children">
       Unsupervised Learning
@@ -468,55 +486,74 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="sub-bubble cat-ml">PCA</div>
         <div class="sub-bubble cat-ml">t-SNE</div>
         <div class="sub-bubble cat-ml">K-means</div>
-        <div class="sub-bubble cat-ml">Hierarchical Clustering</div>
         <div class="sub-bubble cat-ml">DBSCAN</div>
       </div>
     </div>
 
+    <div class="bubble cat-ml">Computer Vision</div>
+
     <!-- Statistical Methods -->
     <div class="bubble cat-stats">Bayesian Statistics</div>
-    <div class="bubble cat-stats">Time Series Analysis</div>
-    <div class="bubble cat-stats">Survival Analysis</div>
+    <div class="bubble cat-stats has-children">
+      Time Series
+      <div class="sub-bubbles">
+        <div class="sub-bubble cat-stats">ARIMA</div>
+        <div class="sub-bubble cat-stats">LSTM</div>
+        <div class="sub-bubble cat-stats">Chronos2</div>
+        <div class="sub-bubble cat-stats">TimesFM</div>
+      </div>
+    </div>
     <div class="bubble cat-stats">Multivariate Analysis</div>
+    <div class="bubble cat-stats">Survival Analysis</div>
 
     <!-- Data Engineering -->
-    <div class="bubble cat-data">DevOps</div>
-    <div class="bubble cat-data">Database Design</div>
     <div class="bubble cat-data">ETL Pipelines</div>
-    <div class="bubble cat-data">APIs</div>
+    <div class="bubble cat-data">Database Design</div>
+    <div class="bubble cat-data">APIs / FastAPI</div>
     <div class="bubble cat-data">Image Processing</div>
     <div class="bubble cat-data has-children">
       Web Applications
       <div class="sub-bubbles">
         <div class="sub-bubble cat-data">Streamlit</div>
+        <div class="sub-bubble cat-data">FastAPI</div>
         <div class="sub-bubble cat-data">Flask</div>
       </div>
     </div>
 
     <!-- Cloud & Big Data -->
-    <div class="bubble cat-cloud">AWS</div>
-    <div class="bubble cat-cloud">Azure</div>
+    <div class="bubble cat-cloud has-children">
+      AWS
+      <div class="sub-bubbles">
+        <div class="sub-bubble cat-cloud">EC2</div>
+        <div class="sub-bubble cat-cloud">Glue</div>
+        <div class="sub-bubble cat-cloud">Athena</div>
+      </div>
+    </div>
+    <div class="bubble cat-cloud">Azure Arc</div>
     <div class="bubble cat-cloud">Hadoop</div>
-    <div class="bubble cat-cloud">Spark</div>
+    <div class="bubble cat-cloud has-children">
+      Spark
+      <div class="sub-bubbles">
+        <div class="sub-bubble cat-cloud">PySpark</div>
+        <div class="sub-bubble cat-cloud">SparkML</div>
+      </div>
+    </div>
     <div class="bubble cat-cloud has-children">
       Modern Data Tools
       <div class="sub-bubbles">
         <div class="sub-bubble cat-cloud">Polars</div>
         <div class="sub-bubble cat-cloud">DuckDB</div>
-        <div class="sub-bubble cat-cloud">Salt CLI</div>
       </div>
     </div>
 
     <!-- Development Tools -->
     <div class="bubble cat-tools">LangChain</div>
     <div class="bubble cat-tools">LangGraph</div>
-    <div class="bubble cat-tools">Git</div>
-    <div class="bubble cat-tools">GitHub</div>
     <div class="bubble cat-tools">Docker</div>
-    <div class="bubble cat-tools">VS Code</div>
+    <div class="bubble cat-tools">Kubernetes</div>
+    <div class="bubble cat-tools">Git / GitHub</div>
 
     <!-- Visualization & BI -->
-    <div class="bubble cat-viz">Tableau</div>
     <div class="bubble cat-viz">Power BI</div>
     <div class="bubble cat-viz">Excel</div>
     <div class="bubble cat-viz">Data Visualization</div>
@@ -529,20 +566,34 @@ document.addEventListener('DOMContentLoaded', function() {
 .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
 .legend-color { width: 20px; height: 20px; border-radius: 50%; }
 .bubbles-container { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center; min-height: 400px; position: relative; padding: 0 2vw; }
-.bubbles-container:has(.bubble:hover) .bubble:not(:hover) { filter: blur(2px); opacity: 0.5; }
-.bubble { padding: 1rem 1.5rem; border-radius: 50px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.15); position: relative; text-align: center; font-size: 0.95rem; }
-.bubble:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 1000; filter: none; opacity: 1; }
-.bubble.has-children:hover { transform: scale(1.1); }
-.sub-bubbles { position: absolute; display: none; flex-wrap: wrap; gap: 0.5rem; z-index: 1001; max-width: 400px; padding: 1rem; background: rgba(255,255,255,0.98); border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0.5rem; }
+.bubbles-container:has(.bubble:hover) .bubble:not(:hover) { filter: blur(2px); opacity: 0.35; }
+.bubble { padding: 0.85rem 1.4rem; border-radius: 50px; color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; position: relative; text-align: center; font-size: 0.9rem; border: 1.5px solid rgba(255,255,255,0.12); }
+.bubble:hover { transform: scale(1.08); z-index: 1000; filter: none !important; opacity: 1 !important; }
+.bubble.has-children:hover { transform: scale(1.12); }
+.sub-bubbles { position: absolute; display: none; flex-wrap: wrap; gap: 0.5rem; z-index: 1001; max-width: 360px; padding: 1rem; background: #181828; border: 1px solid #2a2a42; border-radius: 14px; box-shadow: 0 0 20px rgba(116,98,190,0.2), 0 8px 32px rgba(0,0,0,0.6); top: 100%; left: 50%; transform: translateX(-50%); margin-top: 0.5rem; }
 .bubble:hover .sub-bubbles { display: flex; }
-.sub-bubble { padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; color: white; white-space: nowrap; }
-.cat-languages { background: #7462be; }
-.cat-ml { background: #93199f; }
-.cat-stats { background: #fd8660; }
-.cat-data { background: #f0658d; }
-.cat-cloud { background: #fb416d; }
-.cat-tools { background: #d75ea5; }
-.cat-viz { background: #fe6967; }
+.sub-bubble { padding: 0.4rem 0.9rem; border-radius: 20px; font-size: 0.78rem; font-weight: 500; color: white; white-space: nowrap; border: 1px solid rgba(255,255,255,0.1); }
+.cat-languages { background: rgba(116,98,190,0.25); border-color: rgba(116,98,190,0.55) !important; box-shadow: 0 0 8px rgba(116,98,190,0.2); }
+.cat-languages:hover { background: rgba(116,98,190,0.4); box-shadow: 0 0 16px rgba(116,98,190,0.5), 0 0 32px rgba(116,98,190,0.2) !important; }
+.sub-bubble.cat-languages { background: rgba(116,98,190,0.35); border-color: rgba(116,98,190,0.4) !important; }
+.cat-ml { background: rgba(147,25,159,0.25); border-color: rgba(147,25,159,0.55) !important; box-shadow: 0 0 8px rgba(147,25,159,0.2); }
+.cat-ml:hover { background: rgba(147,25,159,0.4); box-shadow: 0 0 16px rgba(147,25,159,0.5), 0 0 32px rgba(147,25,159,0.2) !important; }
+.sub-bubble.cat-ml { background: rgba(147,25,159,0.35); border-color: rgba(147,25,159,0.4) !important; }
+.cat-stats { background: rgba(253,134,96,0.18); border-color: rgba(253,134,96,0.5) !important; box-shadow: 0 0 8px rgba(253,134,96,0.15); }
+.cat-stats:hover { background: rgba(253,134,96,0.32); box-shadow: 0 0 16px rgba(253,134,96,0.45), 0 0 32px rgba(253,134,96,0.2) !important; }
+.sub-bubble.cat-stats { background: rgba(253,134,96,0.28); border-color: rgba(253,134,96,0.4) !important; }
+.cat-data { background: rgba(240,101,141,0.18); border-color: rgba(240,101,141,0.5) !important; box-shadow: 0 0 8px rgba(240,101,141,0.15); }
+.cat-data:hover { background: rgba(240,101,141,0.32); box-shadow: 0 0 16px rgba(240,101,141,0.45), 0 0 32px rgba(240,101,141,0.2) !important; }
+.sub-bubble.cat-data { background: rgba(240,101,141,0.28); border-color: rgba(240,101,141,0.4) !important; }
+.cat-cloud { background: rgba(251,65,109,0.18); border-color: rgba(251,65,109,0.5) !important; box-shadow: 0 0 8px rgba(251,65,109,0.15); }
+.cat-cloud:hover { background: rgba(251,65,109,0.32); box-shadow: 0 0 16px rgba(251,65,109,0.45), 0 0 32px rgba(251,65,109,0.2) !important; }
+.sub-bubble.cat-cloud { background: rgba(251,65,109,0.28); border-color: rgba(251,65,109,0.4) !important; }
+.cat-tools { background: rgba(215,94,165,0.18); border-color: rgba(215,94,165,0.5) !important; box-shadow: 0 0 8px rgba(215,94,165,0.15); }
+.cat-tools:hover { background: rgba(215,94,165,0.32); box-shadow: 0 0 16px rgba(215,94,165,0.45), 0 0 32px rgba(215,94,165,0.2) !important; }
+.sub-bubble.cat-tools { background: rgba(215,94,165,0.28); border-color: rgba(215,94,165,0.4) !important; }
+.cat-viz { background: rgba(254,105,103,0.18); border-color: rgba(254,105,103,0.5) !important; box-shadow: 0 0 8px rgba(254,105,103,0.15); }
+.cat-viz:hover { background: rgba(254,105,103,0.32); box-shadow: 0 0 16px rgba(254,105,103,0.45), 0 0 32px rgba(254,105,103,0.2) !important; }
+.sub-bubble.cat-viz { background: rgba(254,105,103,0.28); border-color: rgba(254,105,103,0.4) !important; }
 </style>
 <div>
 
