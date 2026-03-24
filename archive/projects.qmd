@@ -2,9 +2,7 @@
 title: "My Projects"
 format:
   html:
-    css:
-      - css/dark-theme.css
-      - css/dark-projects.css
+    css: css/portfolio-grid.css
     theme: cosmo
 ---
 
@@ -33,7 +31,7 @@ format:
 
 **Georgetown University • DSAN 6700: Machine Learning App Deployment**
 
-Discover Washington, DC restaurants by their vibe rather than food type. Enter a text description ("cozy", "romantic", "trendy") or a reference photo and VibeCheck returns matching vibes by extracting multimodal embeddings from images & text (CLIP + SentenceBERT) and returning fast similarity search via vector indexing.
+An application that allows users to discover restaurants in Washington, DC by their vibe, rather than food type! Just enter a text description ("cozy", "romantic", etc) or a reference photo, and VibeCheck will return similar vibes by extracting multimodal embeddings from images & text (CLIP + SentenceBERT) and returning fast similarity search using vector indexing. 
 :::
 :::
 
@@ -50,7 +48,7 @@ Discover Washington, DC restaurants by their vibe rather than food type. Enter a
 
 **Georgetown University • DSAN 6600: Neural Networks and Deep Learning**
 
-The first deep learning model for full Andre Walker 10-class hair typing. Achieves 53.7% top-1 and 88.7% within-one-class accuracy using EfficientNetV2-M with CORN ordinal regression, trained on a custom ~14k-image dataset. Deployed as an interactive Hugging Face Space.
+HairNet, a final project for DSAN 6600, introduces the first deep learning model for full Andre Walker 10-class hair typing, achieving 53.7% top-1 and 88.7% within-one-class accuracy using EfficientNetV2-M with ordinal regression on a custom ~14k-image dataset.
 :::
 :::
 
@@ -67,7 +65,7 @@ The first deep learning model for full Andre Walker 10-class hair typing. Achiev
 
 **Federal Reserve Board**
 
-Introduces M-RARU, an active learning algorithm that intelligently selects which data points a large language model should label when training smaller "student" models. Reduces samples needed by up to 80% vs. random sampling, cutting costs and training time while preserving classification accuracy. Published IEEE Big Data 2025 and as a FEDS Notes paper.
+This research proposes M-RARU, an active learning method that intelligently selects which data points a large language model should label when training smaller "student" models, rather than having the LLM label everything. This approach reduces the number of samples needed by up to 80% compared to random sampling, cutting costs and training time while maintaining classification accuracy. 
 :::
 :::
 
@@ -180,16 +178,16 @@ Exploring how data on humanitarian aid worker deaths and injury can provide insi
 document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
-
+  
   // Filter functionality
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
       // Update active button
       filterButtons.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
-
+      
       const filter = this.getAttribute('data-filter');
-
+      
       projectCards.forEach(card => {
         if (filter === 'all') {
           card.style.display = 'flex';
@@ -207,14 +205,14 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-
+  
   // Prevent card click when clicking buttons
   document.querySelectorAll('.card-buttons a').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
     });
   });
-
+  
   // Click on card (outside buttons) navigates to project
   projectCards.forEach(card => {
     card.addEventListener('click', function(e) {

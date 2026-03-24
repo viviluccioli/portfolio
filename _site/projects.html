@@ -69,8 +69,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="css/ombre.css">
-<link rel="stylesheet" href="css/portfolio-grid.css">
+<link rel="stylesheet" href="css/dark-theme.css">
+<link rel="stylesheet" href="css/dark-projects.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -167,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="vibecheck" class="level3 card-content">
 <h3 class="anchored" data-anchor-id="vibecheck">VibeCheck</h3>
 <p><strong>Georgetown University • DSAN 6700: Machine Learning App Deployment</strong></p>
-<p>An application that allows users to discover restaurants in Washington, DC by their vibe, rather than food type! Just enter a text description (“cozy”, “romantic”, etc) or a reference photo, and VibeCheck will return similar vibes by extracting multimodal embeddings from images &amp; text (CLIP + SentenceBERT) and returning fast similarity search using vector indexing.</p>
+<p>Discover Washington, DC restaurants by their vibe rather than food type. Enter a text description (“cozy”, “romantic”, “trendy”) or a reference photo and VibeCheck returns matching vibes by extracting multimodal embeddings from images &amp; text (CLIP + SentenceBERT) and returning fast similarity search via vector indexing.</p>
 </section>
 </div>
 <div class="project-card" data-category="georgetown apps" data-href="https://huggingface.co/spaces/med2106/hairNet" data-github="https://github.com/med2106/dsan6600_group04_project">
@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="hairnet" class="level3 card-content">
 <h3 class="anchored" data-anchor-id="hairnet">HairNet</h3>
 <p><strong>Georgetown University • DSAN 6600: Neural Networks and Deep Learning</strong></p>
-<p>HairNet, a final project for DSAN 6600, introduces the first deep learning model for full Andre Walker 10-class hair typing, achieving 53.7% top-1 and 88.7% within-one-class accuracy using EfficientNetV2-M with ordinal regression on a custom ~14k-image dataset.</p>
+<p>The first deep learning model for full Andre Walker 10-class hair typing. Achieves 53.7% top-1 and 88.7% within-one-class accuracy using EfficientNetV2-M with CORN ordinal regression, trained on a custom ~14k-image dataset. Deployed as an interactive Hugging Face Space.</p>
 </section>
 </div>
 <div class="project-card" data-category="publications" data-href="https://www.arxiv.org/pdf/2511.11574" data-github="https://www.federalreserve.gov/econres/feds/files/2025108pap.pdf">
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="llm-on-a-budget-active-knowledge-distillation-for-efficient-classification-of-large-text-corpora" class="level3 card-content">
 <h3 class="anchored" data-anchor-id="llm-on-a-budget-active-knowledge-distillation-for-efficient-classification-of-large-text-corpora">LLM on a Budget: Active Knowledge Distillation for Efficient Classification of Large Text Corpora</h3>
 <p><strong>Federal Reserve Board</strong></p>
-<p>This research proposes M-RARU, an active learning method that intelligently selects which data points a large language model should label when training smaller “student” models, rather than having the LLM label everything. This approach reduces the number of samples needed by up to 80% compared to random sampling, cutting costs and training time while maintaining classification accuracy.</p>
+<p>Introduces M-RARU, an active learning algorithm that intelligently selects which data points a large language model should label when training smaller “student” models. Reduces samples needed by up to 80% vs.&nbsp;random sampling, cutting costs and training time while preserving classification accuracy. Published IEEE Big Data 2025 and as a FEDS Notes paper.</p>
 </section>
 </div>
 <div class="project-card" data-category="georgetown" data-href="projects/dsan-5000/_site/index.html" data-github="https://github.com/yourusername/dsan-5000">
@@ -263,16 +263,16 @@ ul.task-list li input[type="checkbox"] {
 document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
-  
+
   // Filter functionality
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
       // Update active button
       filterButtons.forEach(btn => btn.classList.remove('active'));
       this.classList.add('active');
-      
+
       const filter = this.getAttribute('data-filter');
-      
+
       projectCards.forEach(card => {
         if (filter === 'all') {
           card.style.display = 'flex';
@@ -290,14 +290,14 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-  
+
   // Prevent card click when clicking buttons
   document.querySelectorAll('.card-buttons a').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
     });
   });
-  
+
   // Click on card (outside buttons) navigates to project
   projectCards.forEach(card => {
     card.addEventListener('click', function(e) {

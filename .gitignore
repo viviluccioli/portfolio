@@ -1,1 +1,5 @@
 /.quarto/
+_site/
+images/*.pdf
+projects/private-silna-a1f9k/
+docs/projects/.private-silna-a1f9k/
