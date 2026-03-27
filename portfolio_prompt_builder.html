@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Prompt Builder | DSAN Workshop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2 .number {
+            background: #e94560;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #d0d0d0;
+        }
+
+        .hint {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #e94560;
+            box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        select option {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .radio-option {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .radio-option input {
+            display: none;
+        }
+
+        .radio-option label {
+            display: block;
+            padding: 12px 16px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .radio-option input:checked+label {
+            background: rgba(233, 69, 96, 0.3);
+            border-color: #e94560;
+            color: #fff;
+        }
+
+        .radio-option label:hover {
+            border-color: #e94560;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-option {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .checkbox-option input {
+            display: none;
+        }
+
+        .checkbox-option label {
+            display: block;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .checkbox-option input:checked+label {
+            background: rgba(233, 69, 96, 0.3);
+            border-color: #e94560;
+        }
+
+        .checkbox-option label:hover {
+            border-color: #e94560;
+        }
+
+        .color-inputs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        input[type="color"] {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .color-label {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 16px 32px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+        }
+
+        .output-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .output-section.visible {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .prompt-output {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 500px;
+            overflow-y: auto;
+            line-height: 1.8;
+        }
+
+        .copy-btn {
+            margin-top: 16px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: white;
+            background: #16213e;
+            border: 1px solid #e94560;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: #e94560;
+        }
+
+        .copy-btn.copied {
+            background: #27ae60;
+            border-color: #27ae60;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            margin: 20px 0;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .required {
+            color: #e94560;
+        }
+
+        .optional-tag {
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: normal;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Portfolio Prompt Builder</h1>
+            <p class="subtitle">Fill out the form below to generate your perfect AI prompt</p>
+        </header>
+
+        <!-- Section 1: Your Information -->
+        <div class="card">
+            <h2><span class="number">1</span> Your Information</h2>
+
+            <div class="form-group">
+                <label>Your Name <span class="required">*</span></label>
+                <input type="text" id="name" placeholder="e.g., Viviana Rodriguez">
+            </div>
+
+            <div class="form-group">
+                <label>One-Line Tagline <span class="required">*</span></label>
+                <p class="hint">What do you do in one sentence?</p>
+                <input type="text" id="tagline"
+                    placeholder="e.g., Data Scientist passionate about NLP and healthcare AI">
+            </div>
+
+            <div class="form-group">
+                <label>Short Bio</label>
+                <p class="hint">2-3 sentences about your background and interests</p>
+                <textarea id="bio"
+                    placeholder="e.g., I'm a second-year Master's student in Data Science at Georgetown University. I'm passionate about using machine learning to solve healthcare challenges..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Paste Your Resume <span class="optional-tag">(optional but recommended)</span></label>
+                <textarea id="resume" placeholder="Paste the text content of your resume here..."></textarea>
+            </div>
+        </div>
+
+        <!-- Section 2: Technical Identity -->
+        <div class="card">
+            <h2><span class="number">2</span> Technical Identity</h2>
+
+            <div class="form-group">
+                <label>Programming Languages</label>
+                <p class="hint">Select all that apply</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lang-python" value="Python">
+                        <label for="lang-python">Python</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lang-r" value="R">
+                        <label for="lang-r">R</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lang-sql" value="SQL">
+                        <label for="lang-sql">SQL</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lang-js" value="JavaScript">
+                        <label for="lang-js">JavaScript</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lang-java" value="Java">
+                        <label for="lang-java">Java</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="lang-scala" value="Scala">
+                        <label for="lang-scala">Scala</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Other Languages/Tools <span class="optional-tag">(optional)</span></label>
+                <input type="text" id="other-langs" placeholder="e.g., Julia, MATLAB, C++, Rust">
+            </div>
+
+            <div class="form-group">
+                <label>Key Tools & Frameworks</label>
+                <p class="hint">Select all that apply</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-pandas" value="Pandas">
+                        <label for="tool-pandas">Pandas</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-sklearn" value="Scikit-learn">
+                        <label for="tool-sklearn">Scikit-learn</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-tf" value="TensorFlow">
+                        <label for="tool-tf">TensorFlow</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-pytorch" value="PyTorch">
+                        <label for="tool-pytorch">PyTorch</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-spark" value="Spark">
+                        <label for="tool-spark">Spark</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-tableau" value="Tableau">
+                        <label for="tool-tableau">Tableau</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-aws" value="AWS">
+                        <label for="tool-aws">AWS</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-docker" value="Docker">
+                        <label for="tool-docker">Docker</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="tool-git" value="Git">
+                        <label for="tool-git">Git</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Other Tools <span class="optional-tag">(optional)</span></label>
+                <input type="text" id="other-tools" placeholder="e.g., dbt, Airflow, Hugging Face, LangChain">
+            </div>
+
+            <div class="form-group">
+                <label>Data Science Interests</label>
+                <p class="hint">What areas excite you most?</p>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-ml" value="Machine Learning">
+                        <label for="interest-ml">Machine Learning</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-nlp" value="NLP">
+                        <label for="interest-nlp">NLP</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-cv" value="Computer Vision">
+                        <label for="interest-cv">Computer Vision</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-llm" value="LLMs/GenAI">
+                        <label for="interest-llm">LLMs/GenAI</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-de" value="Data Engineering">
+                        <label for="interest-de">Data Engineering</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-viz" value="Data Visualization">
+                        <label for="interest-viz">Visualization</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-stats" value="Statistics">
+                        <label for="interest-stats">Statistics</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="interest-acausal" value="Causal Inference">
+                        <label for="interest-acausal">Causal Inference</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Projects -->
+        <div class="card">
+            <h2><span class="number">3</span> Featured Projects</h2>
+            <p class="hint" style="margin-bottom: 20px;">Add 1-3 projects you want to showcase</p>
+
+            <div class="form-group">
+                <label>Project 1 <span class="required">*</span></label>
+                <input type="text" id="project1-name" placeholder="Project name" style="margin-bottom: 8px;">
+                <textarea id="project1-desc"
+                    placeholder="Brief description: What problem did you solve? What tech did you use? What was the result?"></textarea>
+                <input type="text" id="project1-link" placeholder="GitHub or demo link (optional)"
+                    style="margin-top: 8px;">
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="form-group">
+                <label>Project 2 <span class="optional-tag">(optional)</span></label>
+                <input type="text" id="project2-name" placeholder="Project name" style="margin-bottom: 8px;">
+                <textarea id="project2-desc" placeholder="Brief description"></textarea>
+                <input type="text" id="project2-link" placeholder="GitHub or demo link (optional)"
+                    style="margin-top: 8px;">
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="form-group">
+                <label>Project 3 <span class="optional-tag">(optional)</span></label>
+                <input type="text" id="project3-name" placeholder="Project name" style="margin-bottom: 8px;">
+                <textarea id="project3-desc" placeholder="Brief description"></textarea>
+                <input type="text" id="project3-link" placeholder="GitHub or demo link (optional)"
+                    style="margin-top: 8px;">
+            </div>
+        </div>
+
+        <!-- Section 4: Design Preferences -->
+        <div class="card">
+            <h2><span class="number">4</span> Design Preferences</h2>
+
+            <div class="form-group">
+                <label>Site Structure <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="structure" id="structure-single" value="single-page" checked>
+                        <label for="structure-single">Single Page</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="structure" id="structure-multi" value="multi-page">
+                        <label for="structure-multi">Multiple Pages</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" id="pages-group" style="display: none;">
+                <label>Which pages do you want?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="page-home" value="Home" checked>
+                        <label for="page-home">Home</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="page-about" value="About">
+                        <label for="page-about">About</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="page-projects" value="Projects" checked>
+                        <label for="page-projects">Projects</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="page-blog" value="Blog">
+                        <label for="page-blog">Blog</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="page-contact" value="Contact">
+                        <label for="page-contact">Contact</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Overall Vibe <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="vibe" id="vibe-minimal" value="minimal and clean" checked>
+                        <label for="vibe-minimal">Minimal & Clean</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="vibe" id="vibe-modern" value="modern and professional">
+                        <label for="vibe-modern">Modern & Professional</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="vibe" id="vibe-bold" value="bold and creative">
+                        <label for="vibe-bold">Bold & Creative</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="vibe" id="vibe-playful" value="playful and unique">
+                        <label for="vibe-playful">Playful & Unique</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Color Theme <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="color-theme" id="color-light" value="light">
+                        <label for="color-light">Light Mode</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="color-theme" id="color-dark" value="dark" checked>
+                        <label for="color-dark">Dark Mode</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="color-theme" id="color-both" value="both with toggle">
+                        <label for="color-both">Both (Toggle)</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Color Palette</label>
+                <p class="hint">Choose your colors or leave defaults</p>
+                <div class="color-inputs">
+                    <div class="color-input-wrapper">
+                        <input type="color" id="color-primary" value="#e94560">
+                        <span class="color-label">Primary/Accent</span>
+                    </div>
+                    <div class="color-input-wrapper">
+                        <input type="color" id="color-secondary" value="#16213e">
+                        <span class="color-label">Background</span>
+                    </div>
+                    <div class="color-input-wrapper">
+                        <input type="color" id="color-text" value="#e8e8e8">
+                        <span class="color-label">Text</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Typography Style</label>
+                <select id="typography">
+                    <option value="modern sans-serif (like Inter or Poppins)">Modern Sans-serif (Inter, Poppins)
+                    </option>
+                    <option value="clean geometric sans-serif (like Roboto or Open Sans)">Clean Geometric (Roboto, Open
+                        Sans)</option>
+                    <option value="elegant serif (like Playfair Display or Lora)">Elegant Serif (Playfair, Lora)
+                    </option>
+                    <option value="monospace/techy (like JetBrains Mono or Fira Code)">Monospace/Techy (JetBrains Mono)
+                    </option>
+                    <option value="mix of serif headings and sans-serif body">Mixed (Serif headings, Sans body)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Special Features <span class="optional-tag">(optional)</span></label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feat-animations" value="subtle hover animations">
+                        <label for="feat-animations">Animations</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feat-gradient" value="gradient backgrounds or accents">
+                        <label for="feat-gradient">Gradients</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feat-particles" value="particle or animated background">
+                        <label for="feat-particles">Particle BG</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feat-cards" value="card-based project layout">
+                        <label for="feat-cards">Project Cards</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feat-timeline" value="timeline for experience/education">
+                        <label for="feat-timeline">Timeline</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="feat-skills" value="skill bars or visualization">
+                        <label for="feat-skills">Skill Bars</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Design Inspiration URL <span class="optional-tag">(optional)</span></label>
+                <p class="hint">Link to a portfolio or design you love</p>
+                <input type="text" id="inspiration" placeholder="e.g., https://example.com or describe what you like">
+            </div>
+        </div>
+
+        <!-- Section 5: Technical Approach -->
+        <div class="card">
+            <h2><span class="number">5</span> Technical Approach</h2>
+
+            <div class="form-group">
+                <label>How do you want to build it? <span class="required">*</span></label>
+                <select id="approach">
+                    <option value="Create a single HTML file with embedded CSS and JavaScript that I can easily deploy">
+                        Single HTML file (simplest)</option>
+                    <option value="Create a React/Next.js project structure">React / Next.js</option>
+                    <option value="Create the site using Tailwind CSS for styling">HTML + Tailwind CSS</option>
+                    <option value="Create a Quarto website project structure">Quarto (for notebooks)</option>
+                    <option value="Create a Hugo site structure with a portfolio theme">Hugo static site</option>
+                    <option value="Create a Jekyll site structure for GitHub Pages">Jekyll (GitHub native)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Where will you deploy? <span class="required">*</span></label>
+                <select id="deployment">
+                    <option value="GitHub Pages (free, at username.github.io)">GitHub Pages</option>
+                    <option value="Vercel (free tier, automatic deployments)">Vercel</option>
+                    <option value="Netlify (free tier, drag-and-drop or Git)">Netlify</option>
+                    <option value="Georgetown Domains">Georgetown Domains</option>
+                    <option value="I'll figure out deployment later">Not sure yet</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have an existing template or code? <span class="optional-tag">(optional)</span></label>
+                <textarea id="existing-code"
+                    placeholder="Paste any existing HTML/CSS you want to use as a starting point, or describe a template you're working from..."></textarea>
+            </div>
+        </div>
+
+        <!-- Section 6: Contact & Social -->
+        <div class="card">
+            <h2><span class="number">6</span> Contact & Social Links</h2>
+
+            <div class="two-col">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>GitHub Username <span class="required">*</span></label>
+                    <input type="text" id="github" placeholder="yourusername">
+                </div>
+            </div>
+
+            <div class="two-col">
+                <div class="form-group">
+                    <label>LinkedIn URL <span class="optional-tag">(optional)</span></label>
+                    <input type="text" id="linkedin" placeholder="linkedin.com/in/yourname">
+                </div>
+                <div class="form-group">
+                    <label>Twitter/X <span class="optional-tag">(optional)</span></label>
+                    <input type="text" id="twitter" placeholder="@yourhandle">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Other Links <span class="optional-tag">(optional)</span></label>
+                <input type="text" id="other-links" placeholder="e.g., Kaggle, personal blog, Google Scholar">
+            </div>
+        </div>
+
+        <!-- Generate Button -->
+        <button class="generate-btn" onclick="generatePrompt()">✨ Generate My Prompt</button>
+
+        <!-- Output Section -->
+        <div class="output-section" id="output-section">
+            <div class="card">
+                <h2>📋 Your Custom Prompt</h2>
+                <p style="margin-bottom: 16px; color: #a0a0a0;">Copy this prompt and paste it into Claude, ChatGPT, or
+                    your preferred AI assistant:</p>
+                <div class="prompt-output" id="prompt-output"></div>
+                <button class="copy-btn" onclick="copyPrompt()">📋 Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show/hide pages selection based on structure choice
+        document.querySelectorAll('input[name="structure"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                document.getElementById('pages-group').style.display =
+                    this.value === 'multi-page' ? 'block' : 'none';
+            });
+        });
+
+        function getCheckedValues(selector) {
+            return Array.from(document.querySelectorAll(selector + ':checked'))
+                .map(cb => cb.value);
+        }
+
+        function getRadioValue(name) {
+            const selected = document.querySelector(`input[name="${name}"]:checked`);
+            return selected ? selected.value : '';
+        }
+
+        function generatePrompt() {
+            // Gather all values
+            const name = document.getElementById('name').value.trim();
+            const tagline = document.getElementById('tagline').value.trim();
+            const bio = document.getElementById('bio').value.trim();
+            const resume = document.getElementById('resume').value.trim();
+
+            const languages = getCheckedValues('[id^="lang-"]');
+            const otherLangs = document.getElementById('other-langs').value.trim();
+            const tools = getCheckedValues('[id^="tool-"]');
+            const otherTools = document.getElementById('other-tools').value.trim();
+            const interests = getCheckedValues('[id^="interest-"]');
+
+            const project1Name = document.getElementById('project1-name').value.trim();
+            const project1Desc = document.getElementById('project1-desc').value.trim();
+            const project1Link = document.getElementById('project1-link').value.trim();
+            const project2Name = document.getElementById('project2-name').value.trim();
+            const project2Desc = document.getElementById('project2-desc').value.trim();
+            const project2Link = document.getElementById('project2-link').value.trim();
+            const project3Name = document.getElementById('project3-name').value.trim();
+            const project3Desc = document.getElementById('project3-desc').value.trim();
+            const project3Link = document.getElementById('project3-link').value.trim();
+
+            const structure = getRadioValue('structure');
+            const pages = structure === 'multi-page' ? getCheckedValues('[id^="page-"]') : [];
+            const vibe = getRadioValue('vibe');
+            const colorTheme = getRadioValue('color-theme');
+            const primaryColor = document.getElementById('color-primary').value;
+            const bgColor = document.getElementById('color-secondary').value;
+            const textColor = document.getElementById('color-text').value;
+            const typography = document.getElementById('typography').value;
+            const features = getCheckedValues('[id^="feat-"]');
+            const inspiration = document.getElementById('inspiration').value.trim();
+
+            const approach = document.getElementById('approach').value;
+            const deployment = document.getElementById('deployment').value;
+            const existingCode = document.getElementById('existing-code').value.trim();
+
+            const email = document.getElementById('email').value.trim();
+            const github = document.getElementById('github').value.trim();
+            const linkedin = document.getElementById('linkedin').value.trim();
+            const twitter = document.getElementById('twitter').value.trim();
+            const otherLinks = document.getElementById('other-links').value.trim();
+
+            // Build the prompt
+            let prompt = `I want you to create a personal portfolio website for me. Here are all my details and preferences:
+
+## MY INFORMATION
+
+**Name:** ${name || '[Your Name]'}
+**Tagline:** ${tagline || '[Your one-line description]'}
+${bio ? `**Bio:** ${bio}` : ''}
+${resume ? `\n**Resume/Background:**\n${resume}` : ''}
+
+## TECHNICAL IDENTITY
+
+**Programming Languages:** ${[...languages, otherLangs].filter(Boolean).join(', ') || 'Not specified'}
+**Tools & Frameworks:** ${[...tools, otherTools].filter(Boolean).join(', ') || 'Not specified'}
+**Areas of Interest:** ${interests.join(', ') || 'Not specified'}
+
+## PROJECTS TO SHOWCASE
+`;
+
+            if (project1Name) {
+                prompt += `\n**Project 1: ${project1Name}**
+${project1Desc}${project1Link ? `\nLink: ${project1Link}` : ''}
+`;
+            }
+            if (project2Name) {
+                prompt += `\n**Project 2: ${project2Name}**
+${project2Desc}${project2Link ? `\nLink: ${project2Link}` : ''}
+`;
+            }
+            if (project3Name) {
+                prompt += `\n**Project 3: ${project3Name}**
+${project3Desc}${project3Link ? `\nLink: ${project3Link}` : ''}
+`;
+            }
+
+            prompt += `
+## DESIGN SPECIFICATIONS
+
+**Site Structure:** ${structure === 'single-page' ? 'Single page with sections' : `Multiple pages: ${pages.join(', ')}`}
+**Overall Vibe:** ${vibe}
+**Color Theme:** ${colorTheme}
+**Color Palette:**
+  - Primary/Accent: ${primaryColor}
+  - Background: ${bgColor}
+  - Text: ${textColor}
+**Typography:** ${typography}
+${features.length > 0 ? `**Special Features:** ${features.join(', ')}` : ''}
+${inspiration ? `**Design Inspiration:** ${inspiration}` : ''}
+
+## TECHNICAL REQUIREMENTS
+
+**Build Approach:** ${approach}
+**Deployment Target:** ${deployment}
+${existingCode ? `\n**Existing Code/Template to Use:**\n\`\`\`\n${existingCode}\n\`\`\`` : ''}
+
+## CONTACT INFORMATION TO INCLUDE
+
+${email ? `- Email: ${email}` : ''}
+${github ? `- GitHub: github.com/${github}` : ''}
+${linkedin ? `- LinkedIn: ${linkedin}` : ''}
+${twitter ? `- Twitter: ${twitter}` : ''}
+${otherLinks ? `- Other: ${otherLinks}` : ''}
+
+## INSTRUCTIONS
+
+Please create a complete, production-ready portfolio website based on the specifications above. The code should be:
+1. Fully responsive (mobile, tablet, desktop)
+2. Clean and well-commented
+3. Ready to deploy to ${deployment}
+4. Following modern web development best practices
+
+Start by creating the main HTML file with all the content filled in based on my information above.`;
+
+            // Display the prompt
+            document.getElementById('prompt-output').textContent = prompt;
+            document.getElementById('output-section').classList.add('visible');
+
+            // Scroll to output
+            document.getElementById('output-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyPrompt() {
+            const promptText = document.getElementById('prompt-output').textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✓ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy to Clipboard';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+
+</html>
